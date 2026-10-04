@@ -1,0 +1,145 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 시행령 제89조(시가의 범위 등) 실존",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제89조",
+      "claimed_title": "시가의 범위 등",
+      "cited": "법인세법 시행령 제89조",
+      "source_line": "제89조",
+      "title": "시가의 범위 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 시행령 제2조(정의) 실존",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제2조",
+      "cited": "법인세법 시행령 제2조",
+      "source_line": "제2조 제5항",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 시행령 제106조(소득처분) 실존",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제106조",
+      "cited": "법인세법 시행령 제106조",
+      "source_line": "제106조",
+      "title": "소득처분",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "인용 제목 '업무무관 가지급금 등의 범위' ≠ 실제 '업무무관자산등에 대한 지급이자의 손금불산입'",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제53조",
+      "claimed_title": "업무무관 가지급금 등의 범위",
+      "cited": "법인세법 시행령 제53조",
+      "source_line": "제53조",
+      "title": "업무무관자산등에 대한 지급이자의 손금불산입",
+      "status": "FAIL_MISMATCH",
+      "class": "FAIL",
+      "reason": "조문 제목 불일치",
+      "fix": "조문 번호와 제목 중 무엇이 맞는지 확인해 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 시행령 제88조(부당행위계산의 유형 등) 실존",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제88조",
+      "cited": "법인세법 시행령 제88조",
+      "source_line": "제88조 제1항 제3호",
+      "title": "부당행위계산의 유형 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "국세기본법 제48조(가산세 감면 등) 실존",
+          "source": "국세기본법 (시행 20261002, MST 289999)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "국세기본법",
+      "cited_law": "국세기본법",
+      "article": "제48조",
+      "claimed_title": "가산세 감면 등",
+      "cited": "국세기본법 제48조",
+      "source_line": "제48조",
+      "title": "가산세 감면 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 3건. 경고를 본문에 반영해야 통과한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "PENDING_CHECK",
+          "evidence": "이후 삭제됨(예정 포함): 제105조 삭제 <2026.4.7>",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제105조",
+      "claimed_title": "사법경찰권 행사자의 제한",
+      "cited": "근로기준법 제105조",
+      "source_line": "제105조",
+      "title": "사법경찰권 행사자의 제한",
+      "status": "WARN_PENDING_CHANGE",
+      "class": "WARN",
+      "reason": "현재 유효하나 시행 예정 개정이 있음 (조문이 바뀌거나 삭제될 예정)",
+      "fix": "시행일 전후 어느 조문을 적용하는지 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "PENDING_CHECK",
+          "evidence": "대조 본문(시행 20261002) 이후 개정 있음(예정 포함)",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제109조",
+      "cited": "근로기준법 제109조",
+      "source_line": "제109조",
+      "title": "벌칙",
+      "status": "WARN_PENDING_CHANGE",
+      "class": "WARN",
+      "reason": "현재 유효하나 시행 예정 개정이 있음 (조문이 바뀌거나 삭제될 예정)",
+      "fix": "시행일 전후 어느 조문을 적용하는지 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제23조(해고 등의 제한) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제23조",
+      "claimed_title": "해고 등의 제한",
+      "cited": "근로기준법 제23조",
+      "source_line": "제23조",
+      "title": "해고 등의 제한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ALIAS_CHECK",
+          "evidence": "'공공 도급 사업에 근로기준법' → 후보 '근로기준법'",
+          "source": "법제처 법령 검색"
+        },
+        {
+          "check": "PENDING_CHECK",
+          "evidence": "시행 예정 본문에만 있다: 제44조의4(도급 사업에서 임금비용의 구분지급)",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "공공 도급 사업에 근로기준법",
+      "article": "제44조의4",
+      "claimed_title": "도급 사업에서 임금비용의 구분지급",
+      "cited": "공공 도급 사업에 근로기준법 제44조의4",
+      "source_line": "제44조의4",
+      "status": "WARN_NOT_YET_EFFECTIVE",
+      "class": "WARN",
+      "reason": "아직 시행되지 않은 신설 조문·항 (공포됐으나 시행 전)",
+      "fix": "시행일을 명시하거나, 현재 적용 조문으로 쓰지 않는다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

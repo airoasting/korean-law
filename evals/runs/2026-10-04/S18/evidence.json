@@ -1,0 +1,56 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 2건. 경고를 본문에 반영해야 통과한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "RENAME_CHECK",
+          "evidence": "옛 법령명. 현행은 「전자문서 및 전자거래 기본법」 (법령ID 002000)",
+          "source": "법령 연혁"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "전자거래기본법",
+      "cited_law": "전자거래기본법",
+      "article": "제4조",
+      "cited": "전자거래기본법 제4조",
+      "source_line": "제4조",
+      "status": "WARN_RENAMED",
+      "class": "WARN",
+      "reason": "옛 법령명",
+      "fix": "현행 법령명으로 고치고 조문 번호를 다시 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "RENAME_CHECK",
+          "evidence": "옛 법령명. 현행은 「정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률」 (법령ID 000222)",
+          "source": "법령 연혁"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "정신보건법",
+      "cited_law": "정신보건법",
+      "article": "제24조",
+      "cited": "정신보건법 제24조",
+      "source_line": "제24조",
+      "status": "WARN_RENAMED",
+      "class": "WARN",
+      "reason": "옛 법령명",
+      "fix": "현행 법령명으로 고치고 조문 번호를 다시 확인한다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

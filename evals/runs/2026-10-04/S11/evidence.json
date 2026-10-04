@@ -1,0 +1,108 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "국세기본법 제14조(실질과세) 실존",
+          "source": "국세기본법 (시행 20261002, MST 289999)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "국세기본법",
+      "cited_law": "국세기본법",
+      "article": "제14조",
+      "claimed_title": "실질과세",
+      "cited": "국세기본법 제14조",
+      "source_line": "제14조",
+      "title": "실질과세",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ALIAS_CHECK",
+          "evidence": "'시가보다 낮게 양도한 경우 법인세법' → 후보 '법인세법'",
+          "source": "법제처 법령 검색"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 제52조(부당행위계산의 부인) 실존",
+          "source": "법인세법 (시행 20260701, MST 280349)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "법인세법",
+      "cited_law": "시가보다 낮게 양도한 경우 법인세법",
+      "article": "제52조",
+      "claimed_title": "부당행위계산의 부인",
+      "cited": "시가보다 낮게 양도한 경우 법인세법 제52조",
+      "source_line": "제52조",
+      "title": "부당행위계산의 부인",
+      "status": "OK_ALIAS",
+      "class": "PASS",
+      "reason": "약칭, 정식 법령에서 확인",
+      "fix": "처음 나올 때 정식 법령명을 병기한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부가가치세법 제3조(납세의무자) 실존",
+          "source": "부가가치세법 (시행 20260102, MST 276117)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "부가가치세법",
+      "cited_law": "부가가치세법",
+      "article": "제3조",
+      "cited": "부가가치세법 제3조",
+      "source_line": "제3조",
+      "title": "납세의무자",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "인용 제목 '실질과세' ≠ 실제 '근로소득'",
+          "source": "소득세법 (시행 20260701, MST 280405)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "소득세법",
+      "cited_law": "소득세법",
+      "article": "제20조",
+      "claimed_title": "실질과세",
+      "cited": "소득세법 제20조",
+      "source_line": "제20조",
+      "title": "근로소득",
+      "status": "FAIL_MISMATCH",
+      "class": "FAIL",
+      "reason": "조문 제목 불일치",
+      "fix": "조문 번호와 제목 중 무엇이 맞는지 확인해 고친다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

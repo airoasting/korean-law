@@ -1,0 +1,107 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "주식회사 등의 외부감사에 관한 법률 제8조(내부회계관리제도의 운영 등) 실존",
+          "source": "주식회사 등의 외부감사에 관한 법률 (시행 20250401, MST 270309)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "주식회사 등의 외부감사에 관한 법률",
+      "cited_law": "주식회사 등의 외부감사에 관한 법률",
+      "article": "제8조",
+      "cited": "주식회사 등의 외부감사에 관한 법률 제8조",
+      "source_line": "제8조",
+      "title": "내부회계관리제도의 운영 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "LAW_CHECK",
+          "evidence": "정확히 같은 법령이 없다",
+          "source": "법제처 법령 검색"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "외감법",
+      "cited_law": "외감법",
+      "article": "제8조",
+      "cited": "외감법 제8조",
+      "source_line": "제8조",
+      "status": "WARN_ALIAS_UNREGISTERED",
+      "law_candidates": [
+        "외감법"
+      ],
+      "class": "WARN",
+      "reason": "법제처 약칭 사전에 없는 약칭",
+      "fix": "처음 나올 때 정식 법령명을 병기한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "상법 제393조(이사회의 권한) 실존",
+          "source": "상법 (시행 20260910, MST 273629)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "상법",
+      "cited_law": "상법",
+      "article": "제393조",
+      "claimed_title": "이사회의 권한",
+      "cited": "상법 제393조",
+      "source_line": "제393조",
+      "title": "이사회의 권한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "LAW_CHECK",
+          "evidence": "정확히 같은 법령이 없다",
+          "source": "법제처 법령 검색"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "임원 보수 공시에 관한 법률",
+      "cited_law": "임원 보수 공시에 관한 법률",
+      "article": "제5조",
+      "cited": "임원 보수 공시에 관한 법률 제5조",
+      "source_line": "제5조",
+      "status": "FAIL_LAW_NOT_FOUND",
+      "law_candidates": [
+        "공시에 관한 법률",
+        "보수 공시에 관한 법률",
+        "임원 보수 공시에 관한 법률"
+      ],
+      "class": "FAIL",
+      "reason": "법령 부존재",
+      "fix": "실제 법령을 찾아 바꾸거나 인용을 뺀다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

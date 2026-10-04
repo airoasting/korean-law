@@ -1,0 +1,405 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 6건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 6건. 확인 전에는 PASS를 주지 않는다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [
+    {
+      "rule": "alias-definition",
+      "before": "주식회사 등의 외부감사에 관한 법률(이하 외감법)",
+      "after": "주식회사 등의 외부감사에 관한 법률"
+    },
+    {
+      "rule": "alias-definition",
+      "before": "중대재해 처벌 등에 관한 법률(이하 중처법)",
+      "after": "중대재해 처벌 등에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "외감법",
+      "after": "주식회사 등의 외부감사에 관한 법률"
+    }
+  ],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "주식회사 등의 외부감사에 관한 법률 제8조(내부회계관리제도의 운영 등) 실존",
+          "source": "주식회사 등의 외부감사에 관한 법률 (시행 20250401, MST 270309)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "주식회사 등의 외부감사에 관한 법률",
+      "cited_law": "주식회사 등의 외부감사에 관한 법률",
+      "article": "제8조",
+      "claimed_title": "내부회계관리제도의 운영",
+      "cited": "주식회사 등의 외부감사에 관한 법률 제8조",
+      "source_line": "제8조",
+      "title": "내부회계관리제도의 운영 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "주식회사 등의 외부감사에 관한 법률 시행령 제9조(내부회계관리제도의 운영 등) 실존",
+          "source": "주식회사 등의 외부감사에 관한 법률 시행령 (시행 20260526, MST 286317)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "주식회사 등의 외부감사에 관한 법률 시행령",
+      "cited_law": "주식회사 등의 외부감사에 관한 법률 시행령",
+      "article": "제9조",
+      "cited": "주식회사 등의 외부감사에 관한 법률 시행령 제9조",
+      "source_line": "제9조",
+      "title": "내부회계관리제도의 운영 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "상법 제393조(이사회의 권한) 실존",
+          "source": "상법 (시행 20260910, MST 273629)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "상법",
+      "cited_law": "상법",
+      "article": "제393조",
+      "cited": "상법 제393조",
+      "source_line": "제393조 제2항",
+      "title": "이사회의 권한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제382조의3",
+      "cited": "제382조의3",
+      "source_line": "제382조의3",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "상법 제399조(회사에 대한 책임) 실존",
+          "source": "상법 (시행 20260910, MST 273629)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "상법",
+      "cited_law": "상법",
+      "article": "제399조",
+      "claimed_title": "회사에 대한 책임",
+      "cited": "상법 제399조",
+      "source_line": "제399조",
+      "title": "회사에 대한 책임",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "자본시장과 금융투자업에 관한 법률 제159조(사업보고서 등의 제출) 실존",
+          "source": "자본시장과 금융투자업에 관한 법률 (시행 20261002, MST 288615)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "자본시장과 금융투자업에 관한 법률",
+      "cited_law": "자본시장과 금융투자업에 관한 법률",
+      "article": "제159조",
+      "cited": "자본시장과 금융투자업에 관한 법률 제159조",
+      "source_line": "제159조",
+      "title": "사업보고서 등의 제출",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제4조(사업주와 경영책임자등의 안전 및 보건 확보의무) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
+        }
+      ],
+      "id": "L7",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
+      "article": "제4조",
+      "cited": "중대재해 처벌 등에 관한 법률 제4조",
+      "source_line": "제4조",
+      "title": "사업주와 경영책임자등의 안전 및 보건 확보의무",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L8",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제4조",
+      "claimed_title": "안전보건관리체계의 구축 및 이행 조치",
+      "cited": "시행령 제4조",
+      "source_line": "제4조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L9",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제5조",
+      "claimed_title": "도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무",
+      "cited": "제5조",
+      "source_line": "제5조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L10",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제6조",
+      "cited": "제6조",
+      "source_line": "제6조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L11",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제7조",
+      "claimed_title": "양벌규정",
+      "cited": "제7조",
+      "source_line": "제7조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L12",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제15조",
+      "claimed_title": "손해배상의 책임",
+      "cited": "제15조",
+      "source_line": "제15조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "산업안전보건법 제14조(이사회 보고 및 승인 등) 실존",
+          "source": "산업안전보건법 (시행 20260801, MST 283449)"
+        }
+      ],
+      "id": "L13",
+      "kind": "law",
+      "law": "산업안전보건법",
+      "cited_law": "산업안전보건법",
+      "article": "제14조",
+      "claimed_title": "이사회 보고·승인 등",
+      "cited": "산업안전보건법 제14조",
+      "source_line": "제14조",
+      "title": "이사회 보고 및 승인 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2002다60467 실존: 대법원 20041210 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 27건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2002다60467",
+      "case_no": "2002다60467",
+      "source_line": "2002다60467",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2021다279347 실존: 대법원 20220512 주주대표소송(손해배상)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 1건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2021다279347",
+      "case_no": "2021다279347",
+      "source_line": "2021다279347",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2006다68636 실존: 대법원 20080911 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 12건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C3",
+      "kind": "case",
+      "cited": "2006다68636",
+      "case_no": "2006다68636",
+      "source_line": "2006다68636",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [
+    "L4",
+    "L8",
+    "L9",
+    "L10",
+    "L11",
+    "L12"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

@@ -1,0 +1,5 @@
+[
+  {"id": "L1", "check": "SCOPE_CHECK", "status": "EXCLUDED",
+   "evidence": "본 약관 제11조(책임의 제한)는 회사의 고의·중과실로 인한 손해까지 배상 상한을 직전 3개월 이용료로 묶고 있다.",
+   "source": "input.md", "note": "검토 대상 약관 자체의 조항"}
+]

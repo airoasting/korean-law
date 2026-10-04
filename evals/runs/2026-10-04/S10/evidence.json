@@ -1,0 +1,60 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제56조(연장ㆍ야간 및 휴일 근로) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제56조",
+      "cited": "근로기준법 제56조",
+      "source_line": "제56조",
+      "title": "연장ㆍ야간 및 휴일 근로",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2012다89399 실존: 대법원 20131218 퇴직금",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "2020다247190 본문에 변경 문구(\"배치되는 범위 내에서\")가 있다",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2012다89399",
+      "case_no": "2012다89399",
+      "source_line": "2012다89399",
+      "status": "FAIL_OVERRULED",
+      "class": "FAIL",
+      "reason": "변경·폐기된 판례",
+      "fix": "변경한 후속 판결을 인용하거나 변경 사실을 명시한다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

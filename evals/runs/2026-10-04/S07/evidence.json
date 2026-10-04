@@ -1,0 +1,77 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 2건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "REPEAL_CHECK",
+          "evidence": "「간접투자자산 운용업법」은 폐지된 법령이다 (마지막 시행 20090204, 타법폐지)",
+          "source": "법령 연혁"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "간접투자자산 운용업법",
+      "cited_law": "간접투자자산 운용업법",
+      "article": "제56조",
+      "cited": "간접투자자산 운용업법 제56조",
+      "source_line": "제56조",
+      "status": "FAIL_REPEALED",
+      "class": "FAIL",
+      "reason": "폐지 법령을 현행처럼 인용",
+      "fix": "후속 법령으로 바꾸거나 '구 ○○법'과 적용 시점을 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "REPEAL_CHECK",
+          "evidence": "「증권거래법」은 폐지된 법령이다 (마지막 시행 20090204, 타법폐지)",
+          "source": "법령 연혁"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "증권거래법",
+      "cited_law": "증권거래법",
+      "article": "제188조의2",
+      "cited": "증권거래법 제188조의2",
+      "source_line": "제188조의2",
+      "status": "FAIL_REPEALED",
+      "class": "FAIL",
+      "reason": "폐지 법령을 현행처럼 인용",
+      "fix": "후속 법령으로 바꾸거나 '구 ○○법'과 적용 시점을 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제750조(불법행위의 내용) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제750조",
+      "cited": "민법 제750조",
+      "source_line": "제750조",
+      "title": "불법행위의 내용",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

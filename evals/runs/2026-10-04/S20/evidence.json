@@ -1,0 +1,148 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민사소송법 제249조(소장의 기재사항) 실존",
+          "source": "민사소송법 (시행 20261002, MST 290113)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "민사소송법",
+      "cited_law": "민사소송법",
+      "article": "제249조",
+      "claimed_title": "소장의 기재사항",
+      "cited": "민사소송법 제249조",
+      "source_line": "제249조",
+      "title": "소장의 기재사항",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제2조(신의성실) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제2조",
+      "claimed_title": "신의성실",
+      "cited": "민법 제2조",
+      "source_line": "제2조",
+      "title": "신의성실",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제103조(반사회질서의 법률행위) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제103조",
+      "claimed_title": "반사회질서의 법률행위",
+      "cited": "민법 제103조",
+      "source_line": "제103조",
+      "title": "반사회질서의 법률행위",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제390조(채무불이행과 손해배상) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제390조",
+      "claimed_title": "채무불이행과 손해배상",
+      "cited": "민법 제390조",
+      "source_line": "제390조",
+      "title": "채무불이행과 손해배상",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2013다61381 실존: 대법원 20181030 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 15건, 변경 문구 없음 (전원합의체 1건 포함 확인)",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2013다61381",
+      "case_no": "2013다61381",
+      "source_line": "2013다61381",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2008다38288 실존: 대법원 20100422 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 25건, 변경 문구 없음 (전원합의체 5건 포함 확인)",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2008다38288",
+      "case_no": "2008다38288",
+      "source_line": "2008다38288",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

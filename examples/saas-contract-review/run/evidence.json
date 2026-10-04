@@ -1,0 +1,265 @@
+{
+  "schema": "korean-law/evidence@1",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 2건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "base_date": null,
+  "input": "examples/saas-contract-review/input.md",
+  "normalize_changes": [
+    {
+      "rule": "alias-definition",
+      "before": "이 약관은 다수 고객에게 같은 내용으로 쓰이므로 약관의 규제에 관한 법률(이하 '약관법')",
+      "after": "이 약관은 다수 고객에게 같은 내용으로 쓰이므로 약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "missing-je",
+      "before": " 398조",
+      "after": " 제398조"
+    }
+  ],
+  "counts": {
+    "law": {
+      "total": 7,
+      "PASS": 4,
+      "WARN": 1,
+      "FAIL": 1,
+      "SKIP": 1
+    },
+    "case": {
+      "total": 2,
+      "PASS": 0,
+      "WARN": 1,
+      "FAIL": 1,
+      "SKIP": 0
+    }
+  },
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        },
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "본 약관 제11조(책임의 제한)는 회사의 고의·중과실로 인한 손해까지 배상 상한을 직전 3개월 이용료로 묶고 있다.",
+          "source": "input.md"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제11조",
+      "cited": "제11조",
+      "source_line": "제11조",
+      "status": "EXCLUDED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": "",
+      "checks": [
+        "SCOPE_CHECK"
+      ],
+      "note": "검토 대상 약관 자체의 조항"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제7조",
+      "claimed_title": "면책조항의 금지",
+      "cited": "약관의 규제에 관한 법률 제7조",
+      "source_line": "제7조",
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": "",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제6조(일반원칙) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제6조",
+      "claimed_title": "일반원칙",
+      "cited": "약관의 규제에 관한 법률 제6조",
+      "source_line": "제6조",
+      "title": "일반원칙",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": "",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": "",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제17조(개인정보의 제공) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제17조",
+      "claimed_title": "개인정보의 제공",
+      "cited": "개인정보 보호법 제17조",
+      "source_line": "제17조",
+      "title": "개인정보의 제공",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": "",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "DELETED_CHECK",
+          "evidence": "제22조 삭제 <2020.2.4>",
+          "source": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 (시행 20261002, MST 290001)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "cited_law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "제22조",
+      "claimed_title": "개인정보의 수집·이용 동의 등",
+      "cited": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제22조",
+      "source_line": "제22조",
+      "status": "FAIL_DELETED",
+      "class": "FAIL",
+      "reason": "삭제된 조문",
+      "fix": "삭제 사실을 반영해 고치거나 인용을 뺀다",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '청약철회 기간' ≠ 실제 '청약철회등'",
+          "source": "전자상거래 등에서의 소비자보호에 관한 법률 (시행 20260721, MST 282793)"
+        }
+      ],
+      "id": "L7",
+      "kind": "law",
+      "law": "전자상거래 등에서의 소비자보호에 관한 법률",
+      "cited_law": "전자상거래 등에서의 소비자보호에 관한 법률",
+      "article": "제17조",
+      "claimed_title": "청약철회 기간",
+      "cited": "전자상거래 등에서의 소비자보호에 관한 법률 제17조",
+      "source_line": "제17조",
+      "title": "청약철회등",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2013다61381 실존: 대법원 20181030 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "DATE_CHECK",
+          "evidence": "본문 선고일 20150326 ≠ 실제 20181030 (손해배상(기))",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2013다61381",
+      "case_no": "2013다61381",
+      "source_line": "2013다61381",
+      "status": "FAIL_CASE_MISMATCH",
+      "class": "FAIL",
+      "reason": "사건번호는 실존하나 인용한 선고일과 다름",
+      "fix": "실제 판례를 찾아 사건번호와 선고일을 바로잡거나 인용을 뺀다",
+      "checks": []
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "법제처 수록 판례에서 찾지 못했다 (하급심·미수록일 수 있어 부존재로 단정하지 않는다)",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2017다951234",
+      "case_no": "2017다951234",
+      "source_line": "2017다951234",
+      "status": "WARN_CASE_UNVERIFIED",
+      "class": "WARN",
+      "reason": "판례 미확인 (부존재 단정 불가)",
+      "fix": "원문을 확인하거나 [미확인]으로 표기한다",
+      "checks": []
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API (korean-law 엔진)"
+}

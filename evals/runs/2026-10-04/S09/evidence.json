@@ -1,0 +1,85 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2004도2965 실존: 대법원 20040715 병역법위반",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "2016도10912 본문에 변경 문구(\"변경하기로 한다\")가 있다",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2004도2965",
+      "case_no": "2004도2965",
+      "source_line": "2004도2965",
+      "status": "FAIL_OVERRULED",
+      "class": "FAIL",
+      "reason": "변경·폐기된 판례",
+      "fix": "변경한 후속 판결을 인용하거나 변경 사실을 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2016도10912 실존: 대법원 20181101 병역법위반",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 27건, 변경 문구 없음 (전원합의체 6건 포함 확인)",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2016도10912",
+      "case_no": "2016도10912",
+      "source_line": "2016도10912",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2014도9867 실존: 대법원 20181129 병역법위반",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "법제처 수록 범위에서 이 판례를 인용한 후속 판결이 없다",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C3",
+      "kind": "case",
+      "cited": "2014도9867",
+      "case_no": "2014도9867",
+      "source_line": "2014도9867",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

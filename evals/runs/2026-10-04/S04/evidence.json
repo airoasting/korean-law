@@ -1,0 +1,99 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제15조(개인정보의 수집ㆍ이용) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제15조",
+      "cited": "개인정보 보호법 제15조",
+      "source_line": "제15조",
+      "title": "개인정보의 수집ㆍ이용",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제17조(개인정보의 제공) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제17조",
+      "cited": "개인정보 보호법 제17조",
+      "source_line": "제17조",
+      "title": "개인정보의 제공",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제28조의2(가명정보의 처리 등) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제28조의2",
+      "cited": "개인정보 보호법 제28조의2",
+      "source_line": "제28조의2",
+      "title": "가명정보의 처리 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법에 제99조가 없다",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제99조",
+      "cited": "개인정보 보호법 제99조",
+      "source_line": "제99조",
+      "status": "FAIL_NOT_FOUND",
+      "class": "FAIL",
+      "reason": "조문 없음",
+      "fix": "올바른 조문 번호를 찾아 고치거나 인용을 뺀다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

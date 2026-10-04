@@ -1,0 +1,101 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제3조(약관의 작성 및 설명의무 등) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제3조",
+      "cited": "약관의 규제에 관한 법률 제3조",
+      "source_line": "제3조 제4항",
+      "title": "약관의 작성 및 설명의무 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제4조(개별 약정의 우선) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제4조",
+      "claimed_title": "개별약정의 우선",
+      "cited": "약관의 규제에 관한 법률 제4조",
+      "source_line": "제4조",
+      "title": "개별 약정의 우선",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제7조",
+      "claimed_title": "면책조항의 금지",
+      "cited": "약관의 규제에 관한 법률 제7조",
+      "source_line": "제7조",
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제9조(계약의 해제ㆍ해지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제9조",
+      "claimed_title": "계약의 해제·해지",
+      "cited": "약관의 규제에 관한 법률 제9조",
+      "source_line": "제9조",
+      "title": "계약의 해제ㆍ해지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

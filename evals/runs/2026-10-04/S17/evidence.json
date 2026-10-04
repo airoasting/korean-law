@@ -1,0 +1,145 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [
+    {
+      "rule": "section-sign",
+      "before": "§398",
+      "after": "제398조"
+    },
+    {
+      "rule": "missing-je",
+      "before": " 750조",
+      "after": " 제750조"
+    },
+    {
+      "rule": "missing-je",
+      "before": " 23조",
+      "after": " 제23조"
+    },
+    {
+      "rule": "missing-je-hang",
+      "before": "제23조 1항",
+      "after": "제23조 제1항"
+    },
+    {
+      "rule": "carry-law-name",
+      "before": "법 제390조 및 제103조",
+      "after": "법 제390조 및 같은 법 제103조"
+    }
+  ],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제750조(불법행위의 내용) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제750조",
+      "cited": "민법 제750조",
+      "source_line": "제750조",
+      "title": "불법행위의 내용",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제23조(해고 등의 제한) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제23조",
+      "cited": "근로기준법 제23조",
+      "source_line": "제23조 제1항",
+      "title": "해고 등의 제한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제390조(채무불이행과 손해배상) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제390조",
+      "cited": "민법 제390조",
+      "source_line": "제390조",
+      "title": "채무불이행과 손해배상",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제103조(반사회질서의 법률행위) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제103조",
+      "cited": "민법 제103조",
+      "source_line": "제103조",
+      "title": "반사회질서의 법률행위",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

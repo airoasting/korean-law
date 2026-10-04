@@ -1,0 +1,904 @@
+{
+  "version": 1,
+  "created": "2026-10-04",
+  "as_of": "2026-10-04",
+  "note": "truth: real(진짜, PASS여야 함) | fake(가짜·낡은 인용, 잡아야 함) | legit_old(의도적 구법 인용, WARN이어야 하고 FAIL이면 오탐). expect: OK | FAIL | WARN | NOT_OK(WARN 또는 FAIL). 유형 번호는 DESIGN.md 6절, T8 삭제 조문, T9 부존재 법령, T10 표기 변형, T11 약칭, T12 헌재 결정, T13 구법 인용. as_of: 정답의 기준일. 엔진 회귀는 이 날짜에 시행 중이던 본문으로 대조한다.",
+  "seeds": [
+    {
+      "id": "S01",
+      "genre": "계약서 검토",
+      "expect_verdict": "FAIL",
+      "text": "본 계약의 해지 시 손해배상 책임은 민법 제750조(불법행위의 내용)에 따른다. 또한 같은 법 제398조에 따라 손해배상액의 예정은 법원이 감액할 수 있다. 근로자 해고 시에는 근로기준법 제23조 및 근로기준법 제27조의5를 준수해야 한다. 판례도 같은 취지다(대법원 2013다61381, 대법원 2031다12345). 개인정보 처리는 개인정보 보호법 제15조(개인정보의 수집·이용)에 따른다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "민법 제750조",
+          "law": "민법",
+          "article": "제750조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제398조",
+          "law": "민법",
+          "article": "제398조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제23조",
+          "law": "근로기준법",
+          "article": "제23조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제27조의5",
+          "law": "근로기준법",
+          "article": "제27조의5",
+          "truth": "fake",
+          "type": "T1",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "case",
+          "cited": "2013다61381",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2031다12345",
+          "truth": "fake",
+          "type": "T3",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "law",
+          "cited": "개인정보 보호법 제15조",
+          "law": "개인정보 보호법",
+          "article": "제15조",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "genre": "계약서 검토",
+      "expect_verdict": "FAIL",
+      "text": "제12조(면책)는 사업자의 고의·중과실 책임까지 배제하므로 약관의 규제에 관한 법률 제6조(일반원칙) 및 같은 법 제7조(면책조항의 금지)에 따라 무효가 될 위험이 크다. 제15조의 위약금 조항은 민법 제398조(배상액의 예정)에 따라 법원이 감액할 수 있다. 계약 해석에 관한 일반 원칙은 민법 제1200조를 참고한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "약관의 규제에 관한 법률 제6조",
+          "law": "약관의 규제에 관한 법률",
+          "article": "제6조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "약관의 규제에 관한 법률 제7조",
+          "law": "약관의 규제에 관한 법률",
+          "article": "제7조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제398조",
+          "law": "민법",
+          "article": "제398조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제1200조",
+          "law": "민법",
+          "article": "제1200조",
+          "truth": "fake",
+          "type": "T1",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "genre": "리걸 메모 (해고)",
+      "expect_verdict": "FAIL",
+      "text": "사용자는 근로기준법 제23조(해고 등의 제한) 제1항에 따라 정당한 이유 없이 해고하지 못한다. 해고하려면 근로기준법 제26조(해고의 예고)에 따라 30일 전에 예고하고, 근로기준법 제27조(해고사유 등의 서면통지)에 따라 해고사유와 시기를 서면으로 알려야 한다. 부당해고를 당한 근로자는 근로기준법 제28조에 따라 노동위원회에 구제를 신청할 수 있다. 예고 없이 해고한 경우의 수당 지급은 근로기준법 제60조(해고의 예고)를 따른다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "근로기준법 제23조",
+          "law": "근로기준법",
+          "article": "제23조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제26조",
+          "law": "근로기준법",
+          "article": "제26조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제27조",
+          "law": "근로기준법",
+          "article": "제27조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제28조",
+          "law": "근로기준법",
+          "article": "제28조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제60조(해고의 예고)",
+          "law": "근로기준법",
+          "article": "제60조",
+          "truth": "fake",
+          "type": "T2",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "genre": "리걸 메모 (개인정보)",
+      "expect_verdict": "FAIL",
+      "text": "고객 데이터를 마케팅에 쓰려면 개인정보 보호법 제15조에 따른 동의가 필요하고, 제휴사에 넘기려면 개인정보 보호법 제17조에 따른 제공 동의를 따로 받아야 한다. 통계 작성 목적이라면 개인정보 보호법 제28조의2에 따라 가명정보로 처리할 수 있다. 위반 시 과징금은 개인정보 보호법 제99조에 따른다. 실무에서는 개인정보보호법 제15조의 동의 문구를 별도 화면으로 받는다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "개인정보 보호법 제15조",
+          "law": "개인정보 보호법",
+          "article": "제15조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "개인정보 보호법 제17조",
+          "law": "개인정보 보호법",
+          "article": "제17조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "개인정보 보호법 제28조의2",
+          "law": "개인정보 보호법",
+          "article": "제28조의2",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "개인정보 보호법 제99조",
+          "law": "개인정보 보호법",
+          "article": "제99조",
+          "truth": "fake",
+          "type": "T1",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "genre": "법률 검토 의견서 (이사 책임)",
+      "expect_verdict": "FAIL",
+      "text": "이사는 상법 제382조의3(이사의 충실의무)에 따라 회사를 위해 충실하게 직무를 수행해야 한다. 임무를 게을리한 이사는 상법 제399조(회사에 대한 책임), 제401조(제삼자에 대한 책임)에 따라 손해를 배상한다. 회사 자금을 사적으로 쓴 경우 형법 제356조의 업무상 배임죄도 문제된다. 유사 사안에서 법원은 이사의 책임을 인정했다(대법원 2029도4567).",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "상법 제382조의3",
+          "law": "상법",
+          "article": "제382조의3",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "상법 제399조",
+          "law": "상법",
+          "article": "제399조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "제401조",
+          "law": "상법",
+          "article": "제401조",
+          "truth": "real",
+          "type": "T10",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "형법 제356조",
+          "law": "형법",
+          "article": "제356조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2029도4567",
+          "truth": "fake",
+          "type": "T3",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "genre": "법률 검토 의견서 (내부자거래, 구법)",
+      "expect_verdict": "NOT_PASS",
+      "text": "문제된 거래는 2005년에 있었으므로 당시 시행되던 구 증권거래법 제188조의2(미공개정보 이용행위의 금지)가 적용된다. 현재 같은 행위는 자본시장과 금융투자업에 관한 법률 제174조가 규율한다. 실무에서는 자본시장법 제174조 위반 여부를 내부통제 점검 항목으로 둔다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "구 증권거래법 제188조의2",
+          "law": "증권거래법",
+          "article": "제188조의2",
+          "truth": "legit_old",
+          "type": "T13",
+          "expect": "WARN"
+        },
+        {
+          "kind": "law",
+          "cited": "자본시장과 금융투자업에 관한 법률 제174조",
+          "law": "자본시장과 금융투자업에 관한 법률",
+          "article": "제174조",
+          "truth": "real",
+          "expect": "WARN",
+          "note": "2026-10-04 기준 시행 예정 개정 있음(2026-05-12 공포, 2026-11-13 시행). 시행일이 지나면 OK로 갱신"
+        },
+        {
+          "kind": "law",
+          "cited": "자본시장법 제174조",
+          "law": "자본시장법",
+          "article": "제174조",
+          "truth": "real",
+          "type": "T11",
+          "expect": "WARN",
+          "note": "2026-10-04 기준 시행 예정 개정 있음(2026-05-12 공포, 2026-11-13 시행). 시행일이 지나면 OK로 갱신"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "genre": "법률 검토 의견서 (폐지 법령)",
+      "expect_verdict": "FAIL",
+      "text": "펀드 판매사의 설명의무 위반은 현행 간접투자자산 운용업법 제56조에 따라 판단한다. 임원의 미공개정보 이용은 증권거래법 제188조의2에 따라 처벌된다. 손해배상은 민법 제750조에 따른다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "간접투자자산 운용업법 제56조",
+          "law": "간접투자자산 운용업법",
+          "article": "제56조",
+          "truth": "fake",
+          "type": "T5",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "law",
+          "cited": "증권거래법 제188조의2",
+          "law": "증권거래법",
+          "article": "제188조의2",
+          "truth": "fake",
+          "type": "T5",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제750조",
+          "law": "민법",
+          "article": "제750조",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "genre": "준비서면 (형사)",
+      "expect_verdict": "FAIL",
+      "text": "피고인의 행위는 사람을 기망하여 재물을 교부받은 것이 아니므로 형법 제347조(사기)의 구성요건을 충족하지 않는다. 검사는 형법 제355조(사기)를 적용했으나 이는 법조 적용의 오류다. 대법원 2015다951234 판결도 같은 취지로 판시했다. 설령 유죄라 하더라도 형법 제400조에 따라 형을 감경해야 한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "형법 제347조",
+          "law": "형법",
+          "article": "제347조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "형법 제355조(사기)",
+          "law": "형법",
+          "article": "제355조",
+          "truth": "fake",
+          "type": "T2",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "case",
+          "cited": "2015다951234",
+          "truth": "fake",
+          "type": "T4",
+          "expect": "NOT_OK"
+        },
+        {
+          "kind": "law",
+          "cited": "형법 제400조",
+          "law": "형법",
+          "article": "제400조",
+          "truth": "fake",
+          "type": "T1",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "genre": "준비서면 (양심적 병역거부)",
+      "expect_verdict": "FAIL",
+      "text": "양심적 병역거부는 병역법상 정당한 사유에 해당하지 않는다는 것이 확립된 판례다(대법원 2004도2965 전원합의체 판결). 피고인 측은 대법원 2016도10912 전원합의체 판결을 근거로 들지만, 이후 대법원 2014도9867 판결 등 사안별로 판단이 갈린다.",
+      "citations": [
+        {
+          "kind": "case",
+          "cited": "2004도2965",
+          "truth": "fake",
+          "type": "T6",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "case",
+          "cited": "2016도10912",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2014도9867",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "genre": "준비서면 (통상임금)",
+      "expect_verdict": "NOT_PASS",
+      "text": "정기상여금이 통상임금에 해당하려면 정기성·일률성·고정성을 갖춰야 한다는 것이 대법원 2012다89399 전원합의체 판결의 확립된 법리다. 따라서 재직자 조건이 붙은 상여금은 고정성이 없어 통상임금이 아니고, 근로기준법 제56조에 따른 연장근로수당 산정 기초에서 제외된다.",
+      "citations": [
+        {
+          "kind": "case",
+          "cited": "2012다89399",
+          "truth": "fake",
+          "type": "T6",
+          "expect": "NOT_OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제56조",
+          "law": "근로기준법",
+          "article": "제56조",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "genre": "세무 의견서",
+      "expect_verdict": "FAIL",
+      "text": "거래의 실질이 명의와 다르면 국세기본법 제14조(실질과세)에 따라 실질에 따라 과세한다. 특수관계인에게 자산을 시가보다 낮게 양도한 경우 법인세법 제52조(부당행위계산의 부인)가 적용된다. 해당 용역 공급은 부가가치세법 제3조에 따른 납세의무 대상이다. 대표이사 개인에게 귀속된 금액은 소득세법 제20조(실질과세)에 따라 대표이사의 소득으로 본다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "국세기본법 제14조",
+          "law": "국세기본법",
+          "article": "제14조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "법인세법 제52조",
+          "law": "법인세법",
+          "article": "제52조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "부가가치세법 제3조",
+          "law": "부가가치세법",
+          "article": "제3조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "소득세법 제20조(실질과세)",
+          "law": "소득세법",
+          "article": "제20조",
+          "truth": "fake",
+          "type": "T2",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "genre": "내부통제 문서",
+      "expect_verdict": "FAIL",
+      "text": "회사는 주식회사 등의 외부감사에 관한 법률 제8조에 따라 내부회계관리제도를 운영한다. 외감법 제8조는 대표이사가 운영 실태를 이사회에 보고하도록 한다. 내부회계관리규정의 제정·개정은 상법 제393조(이사회의 권한)에 따라 이사회 결의를 거친다. 임원 보수 공개는 임원 보수 공시에 관한 법률 제5조에 따른다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "주식회사 등의 외부감사에 관한 법률 제8조",
+          "law": "주식회사 등의 외부감사에 관한 법률",
+          "article": "제8조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "외감법 제8조",
+          "law": "외감법",
+          "article": "제8조",
+          "truth": "real",
+          "type": "T11",
+          "expect": "WARN",
+          "note": "법제처 약칭 사전에 없는 약칭. 정식 명칭 병기를 요구하는 WARN이 정책상 정답 (v2, 2026-10-04)"
+        },
+        {
+          "kind": "law",
+          "cited": "상법 제393조",
+          "law": "상법",
+          "article": "제393조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "임원 보수 공시에 관한 법률 제5조",
+          "law": "임원 보수 공시에 관한 법률",
+          "article": "제5조",
+          "truth": "fake",
+          "type": "T9",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "genre": "중대재해 대응 메모",
+      "expect_verdict": "FAIL",
+      "text": "경영책임자는 중대재해 처벌 등에 관한 법률 제4조에 따라 안전보건관리체계를 구축해야 한다. 중대재해처벌법 제4조의 의무는 하청 근로자에게도 미친다. 이사회는 기업 이사회 운영에 관한 법률 제3조에 따라 안전 계획을 매년 승인한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "중대재해 처벌 등에 관한 법률 제4조",
+          "law": "중대재해 처벌 등에 관한 법률",
+          "article": "제4조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "중대재해처벌법 제4조",
+          "law": "중대재해처벌법",
+          "article": "제4조",
+          "truth": "real",
+          "type": "T11",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "기업 이사회 운영에 관한 법률 제3조",
+          "law": "기업 이사회 운영에 관한 법률",
+          "article": "제3조",
+          "truth": "fake",
+          "type": "T9",
+          "expect": "FAIL"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "genre": "형사 리스크 메모 (삭제 조문)",
+      "expect_verdict": "FAIL",
+      "text": "임원의 사생활 문제는 형법 제241조(간통)에 따라 형사 처벌될 수 있어 평판 리스크가 크다. 혼인을 빙자한 경우에는 형법 제304조도 적용된다. 다만 헌법재판소 2009헌바17 결정의 취지를 함께 검토해야 한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "형법 제241조",
+          "law": "형법",
+          "article": "제241조",
+          "truth": "fake",
+          "type": "T8",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "law",
+          "cited": "형법 제304조",
+          "law": "형법",
+          "article": "제304조",
+          "truth": "fake",
+          "type": "T8",
+          "expect": "FAIL"
+        },
+        {
+          "kind": "case",
+          "cited": "2009헌바17",
+          "truth": "real",
+          "type": "T12",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "genre": "헌법 쟁점 의견서",
+      "expect_verdict": "NOT_PASS",
+      "text": "수도 이전과 같은 국가 중대사는 관습헌법의 문제로 볼 수 있다(헌법재판소 2004헌마554 결정). 대법원도 대법원 2019도987654 판결에서 같은 논리를 채택했다.",
+      "citations": [
+        {
+          "kind": "case",
+          "cited": "2004헌마554",
+          "truth": "real",
+          "type": "T12",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2019도987654",
+          "truth": "fake",
+          "type": "T4",
+          "expect": "NOT_OK"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "genre": "공정거래 리스크 메모",
+      "expect_verdict": "PASS",
+      "text": "대리점에 판매 목표를 강제하는 행위는 공정거래법 제45조(불공정거래행위의 금지)에 해당할 수 있다. 하도급 단가를 일방적으로 낮추면 하도급거래 공정화에 관한 법률 제4조 위반이 된다. 과징금 기준은 독점규제 및 공정거래에 관한 법률 제45조와 시행령을 함께 본다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "공정거래법 제45조",
+          "law": "공정거래법",
+          "article": "제45조",
+          "truth": "real",
+          "type": "T11",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "하도급거래 공정화에 관한 법률 제4조",
+          "law": "하도급거래 공정화에 관한 법률",
+          "article": "제4조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "독점규제 및 공정거래에 관한 법률 제45조",
+          "law": "독점규제 및 공정거래에 관한 법률",
+          "article": "제45조",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "genre": "표기 변형",
+      "expect_verdict": "PASS",
+      "text": "가해자는 민법 750조에 따라 손해를 배상해야 한다. 위약금이 과다하면 민법 §398에 따라 감액될 수 있다. 해고는 근로기준법 23조 1항의 정당한 이유가 있어야 한다. 채무불이행 책임은 민법 제390조 및 제103조와 함께 검토한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "민법 750조",
+          "law": "민법",
+          "article": "제750조",
+          "truth": "real",
+          "type": "T10",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 §398",
+          "law": "민법",
+          "article": "제398조",
+          "truth": "real",
+          "type": "T10",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 23조 1항",
+          "law": "근로기준법",
+          "article": "제23조",
+          "truth": "real",
+          "type": "T10",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제390조",
+          "law": "민법",
+          "article": "제390조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "제103조",
+          "law": "민법",
+          "article": "제103조",
+          "truth": "real",
+          "type": "T10",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "genre": "옛 법령명",
+      "expect_verdict": "NOT_PASS",
+      "text": "전자 계약서의 효력은 전자거래기본법 제4조에 따라 인정된다. 임직원 정신건강 지원 프로그램은 정신보건법 제24조의 절차를 참고해 설계한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "전자거래기본법 제4조",
+          "law": "전자거래기본법",
+          "article": "제4조",
+          "truth": "fake",
+          "type": "T7",
+          "expect": "NOT_OK"
+        },
+        {
+          "kind": "law",
+          "cited": "정신보건법 제24조",
+          "law": "정신보건법",
+          "article": "제24조",
+          "truth": "fake",
+          "type": "T7",
+          "expect": "NOT_OK"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "genre": "임대차 검토",
+      "expect_verdict": "NOT_PASS",
+      "text": "임차인은 주택임대차보호법 제3조(대항력 등)에 따라 주택 인도와 주민등록을 마친 다음 날부터 대항력을 갖는다. 상가 임차인은 상가건물 임대차보호법 제10조에 따라 계약갱신을 요구할 수 있다. 차임 연체가 계속되면 임대인은 민법 제543조(해지, 해제권)에 따라 계약을 해지할 수 있다. 같은 취지로 대법원 2017두951111 판결이 있다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "주택임대차보호법 제3조",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "상가건물 임대차보호법 제10조",
+          "law": "상가건물 임대차보호법",
+          "article": "제10조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제543조",
+          "law": "민법",
+          "article": "제543조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2017두951111",
+          "truth": "fake",
+          "type": "T4",
+          "expect": "NOT_OK"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "genre": "깨끗한 소장 초안",
+      "expect_verdict": "PASS",
+      "text": "원고는 민사소송법 제249조(소장의 기재사항)에 따라 청구취지와 청구원인을 적는다. 피고의 행위는 민법 제2조(신의성실)에 반하고, 계약 조항은 민법 제103조(반사회질서의 법률행위)에 따라 무효다. 피고는 민법 제390조(채무불이행과 손해배상)에 따라 손해를 배상해야 한다. 대법원 2013다61381 전원합의체 판결과 대법원 2008다38288 전원합의체 판결의 법리도 참고한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "민사소송법 제249조",
+          "law": "민사소송법",
+          "article": "제249조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제2조",
+          "law": "민법",
+          "article": "제2조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제103조",
+          "law": "민법",
+          "article": "제103조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "민법 제390조",
+          "law": "민법",
+          "article": "제390조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2013다61381",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "case",
+          "cited": "2008다38288",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "genre": "계약서 검토 (자기 조항 참조)",
+      "expect_verdict": "PASS",
+      "text": "본 계약서 제12조(면책)는 사업자의 고의·중과실 책임까지 배제하고 있어 수정이 필요하다. 계약서 제15조의 지체상금 조항은 민법 제398조(배상액의 예정)에 따라 법원이 감액할 수 있다. 면책 범위는 약관의 규제에 관한 법률 제7조(면책조항의 금지)를 기준으로 다시 정한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "민법 제398조",
+          "law": "민법",
+          "article": "제398조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "약관의 규제에 관한 법률 제7조",
+          "law": "약관의 규제에 관한 법률",
+          "article": "제7조",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "genre": "준비서면 (사건번호 실존, 선고일 불일치)",
+      "expect_verdict": "FAIL",
+      "text": "해고의 정당한 이유는 사회통념상 고용관계를 계속할 수 없을 정도인지로 판단한다(대법원 2003. 7. 22. 선고 2002두12052 판결). 강제징용 피해자의 위자료 청구권은 청구권협정의 적용대상에 포함되지 않는다(대법원 2018. 10. 30. 선고 2013다61381 전원합의체 판결).",
+      "citations": [
+        {
+          "kind": "case",
+          "cited": "2002두12052",
+          "truth": "fake",
+          "type": "T14",
+          "expect": "FAIL",
+          "note": "실제는 2005.01.28 선고 공정거래 사건. 블랙독 doc3에서 발견"
+        },
+        {
+          "kind": "case",
+          "cited": "2013다61381",
+          "truth": "real",
+          "expect": "OK"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "genre": "내부통제 메모 (약칭 정의, 법령명 생략)",
+      "expect_verdict": "PASS",
+      "text": "회사는 주식회사 등의 외부감사에 관한 법률(이하 '외감법') 제8조에 따라 내부회계관리제도를 운영한다. 외감법 제8조는 대표이사의 운영실태 보고 의무를 정한다. 경영책임자는 중대재해 처벌 등에 관한 법률(이하 중처법)에 따른 의무를 진다. 중처법 제4조는 안전보건관리체계 구축 의무를 정한다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "주식회사 등의 외부감사에 관한 법률 제8조",
+          "law": "주식회사 등의 외부감사에 관한 법률",
+          "article": "제8조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "중처법 제4조",
+          "law": "중대재해 처벌 등에 관한 법률",
+          "article": "제4조",
+          "truth": "real",
+          "type": "T11",
+          "expect": "OK",
+          "note": "문서 안 약칭 정의로 정식 명칭 해소"
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "genre": "노무 메모 (시행 예정 개정이 있는 조문)",
+      "expect_verdict": "NOT_PASS",
+      "note": "2026-10-04 기준 정답. 제105조는 2026-12-08 삭제, 제109조는 2026-10-08 개정 예정이라 오늘은 유효하다. 시행일이 지나면 정답을 갱신한다",
+      "text": "노동 관계 법령에 따른 현장조사는 근로기준법 제105조(사법경찰권 행사자의 제한)에 따라 근로감독관만 할 수 있다. 임금을 체불한 사용자는 근로기준법 제109조에 따라 3년 이하의 징역 또는 3천만원 이하의 벌금에 처해진다. 해고는 근로기준법 제23조(해고 등의 제한)를 따른다. 2027년부터는 공공 도급 사업에 근로기준법 제44조의4(도급 사업에서 임금비용의 구분지급)가 적용된다.",
+      "citations": [
+        {
+          "kind": "law",
+          "cited": "근로기준법 제105조",
+          "law": "근로기준법",
+          "article": "제105조",
+          "truth": "real",
+          "type": "T15",
+          "expect": "WARN",
+          "note": "삭제 예정 (2026-12-08). FAIL이면 오탐"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제109조",
+          "law": "근로기준법",
+          "article": "제109조",
+          "truth": "real",
+          "type": "T15",
+          "expect": "WARN",
+          "note": "개정 예정 (2026-10-08)"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제23조",
+          "law": "근로기준법",
+          "article": "제23조",
+          "truth": "real",
+          "expect": "OK"
+        },
+        {
+          "kind": "law",
+          "cited": "근로기준법 제44조의4",
+          "law": "근로기준법",
+          "article": "제44조의4",
+          "truth": "real",
+          "type": "T15",
+          "expect": "WARN",
+          "note": "2027-01-01 시행 신설 조문. FAIL이면 오탐"
+        }
+      ]
+    }
+  ]
+}

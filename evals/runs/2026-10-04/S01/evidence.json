@@ -1,0 +1,163 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 2건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제750조(불법행위의 내용) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제750조",
+      "claimed_title": "불법행위의 내용",
+      "cited": "민법 제750조",
+      "source_line": "제750조",
+      "title": "불법행위의 내용",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제23조(해고 등의 제한) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제23조",
+      "cited": "근로기준법 제23조",
+      "source_line": "제23조",
+      "title": "해고 등의 제한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법에 제27조의5가 없다",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제27조의5",
+      "cited": "근로기준법 제27조의5",
+      "source_line": "제27조의5",
+      "status": "FAIL_NOT_FOUND",
+      "class": "FAIL",
+      "reason": "조문 없음",
+      "fix": "올바른 조문 번호를 찾아 고치거나 인용을 뺀다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제15조(개인정보의 수집ㆍ이용) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제15조",
+      "claimed_title": "개인정보의 수집·이용",
+      "cited": "개인정보 보호법 제15조",
+      "source_line": "제15조",
+      "title": "개인정보의 수집ㆍ이용",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2013다61381 실존: 대법원 20181030 손해배상(기)",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 15건, 변경 문구 없음 (전원합의체 1건 포함 확인)",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2013다61381",
+      "case_no": "2013다61381",
+      "source_line": "2013다61381",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "접수 연도 2031는 아직 오지 않았다",
+          "source": "사건번호 형식"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2031다12345",
+      "case_no": "2031다12345",
+      "source_line": "2031다12345",
+      "status": "FAIL_IMPOSSIBLE_CASE",
+      "class": "FAIL",
+      "reason": "실존 불가 사건번호",
+      "fix": "판례 인용을 빼거나 실제 사건번호로 바꾼다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

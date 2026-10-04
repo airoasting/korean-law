@@ -1,0 +1,484 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 10건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 7건. 확인 전에는 PASS를 주지 않는다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [
+    {
+      "rule": "alias-definition",
+      "before": "부정경쟁방지 및 영업비밀보호에 관한 법률(이하 부경법)",
+      "after": "부정경쟁방지 및 영업비밀보호에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "부경법",
+      "after": "부정경쟁방지 및 영업비밀보호에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "부경법",
+      "after": "부정경쟁방지 및 영업비밀보호에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "부경법",
+      "after": "부정경쟁방지 및 영업비밀보호에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "부경법",
+      "after": "부정경쟁방지 및 영업비밀보호에 관한 법률"
+    },
+    {
+      "rule": "carry-law-name",
+      "before": "법 제356조(업무상배임)와 제355조",
+      "after": "법 제356조(업무상배임)와 같은 법 제355조"
+    }
+  ],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조(정의) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제2조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조",
+      "source_line": "제2조 제2호",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제10조(영업비밀 침해행위에 대한 금지청구권 등) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제10조",
+      "claimed_title": "영업비밀 침해행위에 대한 금지청구권 등",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제10조",
+      "source_line": "제10조",
+      "title": "영업비밀 침해행위에 대한 금지청구권 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민사집행법 제300조(가처분의 목적) 실존",
+          "source": "민사집행법 (시행 20260201, MST 268837)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "민사집행법",
+      "cited_law": "민사집행법",
+      "article": "제300조",
+      "claimed_title": "가처분의 목적",
+      "cited": "민사집행법 제300조",
+      "source_line": "제300조",
+      "title": "가처분의 목적",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조(정의) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제2조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조",
+      "source_line": "제2조 제3호",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '영업비밀 침해행위에 대한 손해배상책임' ≠ 실제 '영업비밀 침해에 대한 손해배상책임'",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제11조",
+      "claimed_title": "영업비밀 침해행위에 대한 손해배상책임",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제11조",
+      "source_line": "제11조",
+      "title": "영업비밀 침해에 대한 손해배상책임",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제14조의2",
+      "claimed_title": "손해액의 추정 등",
+      "cited": "제14조의2",
+      "source_line": "제14조의2",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L7",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제14조의4",
+      "claimed_title": "비밀유지명령",
+      "cited": "제14조의4",
+      "source_line": "제14조의4",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "저작권법 제4조(저작물의 예시 등) 실존",
+          "source": "저작권법 (시행 20260811, MST 283335)"
+        }
+      ],
+      "id": "L8",
+      "kind": "law",
+      "law": "저작권법",
+      "cited_law": "저작권법",
+      "article": "제4조",
+      "cited": "저작권법 제4조",
+      "source_line": "제4조 제1항 제9호",
+      "title": "저작물의 예시 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L9",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제9조",
+      "cited": "제9조",
+      "source_line": "제9조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L10",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제123조",
+      "cited": "제123조",
+      "source_line": "제123조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L11",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제125조",
+      "cited": "제125조",
+      "source_line": "제125조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제18조(벌칙) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L12",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제18조",
+      "claimed_title": "벌칙",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제18조",
+      "source_line": "제18조",
+      "title": "벌칙",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L13",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제19조",
+      "claimed_title": "양벌규정",
+      "cited": "제19조",
+      "source_line": "제19조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L14",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제2조",
+      "cited": "제2조",
+      "source_line": "제2조 제3호",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '업무상배임' ≠ 실제 '업무상의 횡령과 배임'",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L15",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제356조",
+      "claimed_title": "업무상배임",
+      "cited": "형법 제356조",
+      "source_line": "제356조",
+      "title": "업무상의 횡령과 배임",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "형법 제355조(횡령, 배임) 실존",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L16",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제355조",
+      "cited": "형법 제355조",
+      "source_line": "제355조 제2항",
+      "title": "횡령, 배임",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제48조(정보통신망 침해행위 등의 금지) 실존",
+          "source": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 (시행 20261002, MST 290001)"
+        }
+      ],
+      "id": "L17",
+      "kind": "law",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "cited_law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "제48조",
+      "claimed_title": "정보통신망 침해행위 등의 금지",
+      "cited": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제48조",
+      "source_line": "제48조",
+      "title": "정보통신망 침해행위 등의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2008도3435 실존: 대법원 20080710 부정경쟁방지및영업비밀보호에관한법률위반",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 35건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2008도3435",
+      "case_no": "2008도3435",
+      "source_line": "2008도3435",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "법제처 수록 판례에서 찾지 못했다 (하급심·미수록일 수 있어 부존재로 단정하지 않는다)",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2003마1018",
+      "case_no": "2003마1018",
+      "source_line": "2003마1018",
+      "status": "WARN_CASE_UNVERIFIED",
+      "class": "WARN",
+      "reason": "판례 미확인 (부존재 단정 불가)",
+      "fix": "원문을 확인하거나 [미확인]으로 표기한다"
+    }
+  ],
+  "pending_checks": [
+    "L6",
+    "L7",
+    "L9",
+    "L10",
+    "L11",
+    "L13",
+    "L14"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

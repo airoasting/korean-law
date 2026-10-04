@@ -1,0 +1,421 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 5건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 4건. 확인 전에는 PASS를 주지 않는다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [
+    {
+      "rule": "alias-definition",
+      "before": "공급사가 다수 고객과 계약하려고 미리 마련한 양식은 약관의 규제에 관한 법률(이하 약관법)",
+      "after": "공급사가 다수 고객과 계약하려고 미리 마련한 양식은 약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "alias-expand",
+      "before": "약관법",
+      "after": "약관의 규제에 관한 법률"
+    },
+    {
+      "rule": "carry-law-name",
+      "before": "법 제390조(채무불이행과 손해배상)와 제105조",
+      "after": "법 제390조(채무불이행과 손해배상)와 같은 법 제105조"
+    }
+  ],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제2조(정의) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제2조",
+      "cited": "약관의 규제에 관한 법률 제2조",
+      "source_line": "제2조 제1호",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제3조(약관의 작성 및 설명의무 등) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제3조",
+      "claimed_title": "약관의 작성 및 설명의무 등",
+      "cited": "약관의 규제에 관한 법률 제3조",
+      "source_line": "제3조",
+      "title": "약관의 작성 및 설명의무 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제3조",
+      "cited": "제3조",
+      "source_line": "제3조 제4항",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제4조",
+      "claimed_title": "개별약정의 우선",
+      "cited": "제4조",
+      "source_line": "제4조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제6조(일반원칙) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제6조",
+      "claimed_title": "일반원칙",
+      "cited": "약관의 규제에 관한 법률 제6조",
+      "source_line": "제6조",
+      "title": "일반원칙",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제7조",
+      "claimed_title": "면책조항의 금지",
+      "cited": "제7조",
+      "source_line": "제7조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제390조(채무불이행과 손해배상) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L7",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제390조",
+      "claimed_title": "채무불이행과 손해배상",
+      "cited": "민법 제390조",
+      "source_line": "제390조",
+      "title": "채무불이행과 손해배상",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '임의규정과 다른 의사표시' ≠ 실제 '임의규정'",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L8",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제105조",
+      "claimed_title": "임의규정과 다른 의사표시",
+      "cited": "민법 제105조",
+      "source_line": "제105조",
+      "title": "임의규정",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L9",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "claimed_title": "배상액의 예정",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L10",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제7조",
+      "cited": "약관의 규제에 관한 법률 제7조",
+      "source_line": "제7조 제2호",
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ALIAS_CHECK",
+          "evidence": "'나 민법' → 후보 '민법'",
+          "source": "법제처 법령 검색"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제103조(반사회질서의 법률행위) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L11",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "나 민법",
+      "article": "제103조",
+      "claimed_title": "반사회질서의 법률행위",
+      "cited": "나 민법 제103조",
+      "source_line": "제103조",
+      "title": "반사회질서의 법률행위",
+      "status": "OK_ALIAS",
+      "class": "PASS",
+      "reason": "약칭, 정식 법령에서 확인",
+      "fix": "처음 나올 때 정식 법령명을 병기한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "개인정보 보호법 제39조(손해배상책임) 실존",
+          "source": "개인정보 보호법 (시행 20260911, MST 283839)"
+        }
+      ],
+      "id": "L12",
+      "kind": "law",
+      "law": "개인정보 보호법",
+      "cited_law": "개인정보 보호법",
+      "article": "제39조",
+      "claimed_title": "손해배상책임",
+      "cited": "개인정보 보호법 제39조",
+      "source_line": "제39조",
+      "title": "손해배상책임",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제12조(의사표시의 의제) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L13",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제12조",
+      "claimed_title": "의사표시의 의제",
+      "cited": "약관의 규제에 관한 법률 제12조",
+      "source_line": "제12조",
+      "title": "의사표시의 의제",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L14",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제9조",
+      "claimed_title": "계약의 해제·해지",
+      "cited": "제9조",
+      "source_line": "제9조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2007마1328 실존: 대법원 20081216 부당이득금",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 29건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2007마1328",
+      "case_no": "2007마1328",
+      "source_line": "2007마1328",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2002다64957 실존: 대법원 20030408 채무부존재확인·부당이득금",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 16건, 변경 문구 없음 (전원합의체 1건 포함 확인)",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2002다64957",
+      "case_no": "2002다64957",
+      "source_line": "2002다64957",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [
+    "L3",
+    "L4",
+    "L6",
+    "L14"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

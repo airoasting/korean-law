@@ -1,0 +1,502 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 10건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 7건. 확인 전에는 PASS를 주지 않는다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [
+    {
+      "rule": "carry-law-name",
+      "before": "법 제35조(저가 양수 또는 고가 양도에 따른 이익의 증여)나 제45조",
+      "after": "법 제35조(저가 양수 또는 고가 양도에 따른 이익의 증여)나 같은 법 제45조"
+    }
+  ],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "국세기본법 제26조의2(국세의 부과제척기간) 실존",
+          "source": "국세기본법 (시행 20261002, MST 289999)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "국세기본법",
+      "cited_law": "국세기본법",
+      "article": "제26조의2",
+      "cited": "국세기본법 제26조의2",
+      "source_line": "제26조의2",
+      "title": "국세의 부과제척기간",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 제52조(부당행위계산의 부인) 실존",
+          "source": "법인세법 (시행 20260701, MST 280349)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "법인세법",
+      "cited_law": "법인세법",
+      "article": "제52조",
+      "claimed_title": "부당행위계산의 부인",
+      "cited": "법인세법 제52조",
+      "source_line": "제52조",
+      "title": "부당행위계산의 부인",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 시행령 제88조(부당행위계산의 유형 등) 실존",
+          "source": "법인세법 시행령 (시행 20261001, MST 290843)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "법인세법 시행령",
+      "cited_law": "법인세법 시행령",
+      "article": "제88조",
+      "cited": "법인세법 시행령 제88조",
+      "source_line": "제88조 제1항 제6호",
+      "title": "부당행위계산의 유형 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제89조",
+      "claimed_title": "시가의 범위 등",
+      "cited": "시행령 제89조",
+      "source_line": "제89조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 제2조(정의) 실존",
+          "source": "법인세법 (시행 20260701, MST 280349)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "법인세법",
+      "cited_law": "법인세법",
+      "article": "제2조",
+      "cited": "법인세법 제2조",
+      "source_line": "제2조 제12호",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제2조",
+      "cited": "시행령 제2조",
+      "source_line": "제2조 제5항",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 제67조(소득처분) 실존",
+          "source": "법인세법 (시행 20260701, MST 280349)"
+        }
+      ],
+      "id": "L7",
+      "kind": "law",
+      "law": "법인세법",
+      "cited_law": "법인세법",
+      "article": "제67조",
+      "claimed_title": "소득 처분",
+      "cited": "법인세법 제67조",
+      "source_line": "제67조",
+      "title": "소득처분",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L8",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제106조",
+      "cited": "시행령 제106조",
+      "source_line": "제106조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "법인세법 제28조(지급이자의 손금불산입) 실존",
+          "source": "법인세법 (시행 20260701, MST 280349)"
+        }
+      ],
+      "id": "L9",
+      "kind": "law",
+      "law": "법인세법",
+      "cited_law": "법인세법",
+      "article": "제28조",
+      "claimed_title": "지급이자의 손금불산입",
+      "cited": "법인세법 제28조",
+      "source_line": "제28조",
+      "title": "지급이자의 손금불산입",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L10",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제53조",
+      "claimed_title": "업무무관 가지급금 등의 범위",
+      "cited": "시행령 제53조",
+      "source_line": "제53조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '업무상배임' ≠ 실제 '업무상의 횡령과 배임'",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L11",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제356조",
+      "claimed_title": "업무상배임",
+      "cited": "형법 제356조",
+      "source_line": "제356조",
+      "title": "업무상의 횡령과 배임",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L12",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제88조",
+      "cited": "시행령 제88조",
+      "source_line": "제88조 제1항 제3호",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "부모 법령이 없는 '시행령'",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L13",
+      "kind": "law",
+      "law": "시행령",
+      "cited_law": "시행령",
+      "article": "제89조",
+      "cited": "시행령 제89조",
+      "source_line": "제89조 제1항",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "PENDING_CHECK",
+          "evidence": "대조 본문(시행 20260102) 이후 개정 있음(예정 포함)",
+          "source": "상속세 및 증여세법 (시행 20260102, MST 276123)"
+        }
+      ],
+      "id": "L14",
+      "kind": "law",
+      "law": "상속세 및 증여세법",
+      "cited_law": "상속세 및 증여세법",
+      "article": "제35조",
+      "claimed_title": "저가 양수 또는 고가 양도에 따른 이익의 증여",
+      "cited": "상속세 및 증여세법 제35조",
+      "source_line": "제35조",
+      "title": "저가 양수 또는 고가 양도에 따른 이익의 증여",
+      "status": "WARN_PENDING_CHANGE",
+      "class": "WARN",
+      "reason": "현재 유효하나 시행 예정 개정이 있음 (조문이 바뀌거나 삭제될 예정)",
+      "fix": "시행일 전후 어느 조문을 적용하는지 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "PENDING_CHECK",
+          "evidence": "대조 본문(시행 20260102) 이후 개정 있음(예정 포함)",
+          "source": "상속세 및 증여세법 (시행 20260102, MST 276123)"
+        }
+      ],
+      "id": "L15",
+      "kind": "law",
+      "law": "상속세 및 증여세법",
+      "cited_law": "상속세 및 증여세법",
+      "article": "제45조의5",
+      "claimed_title": "특정법인과의 거래를 통한 이익의 증여 의제",
+      "cited": "상속세 및 증여세법 제45조의5",
+      "source_line": "제45조의5",
+      "title": "특정법인과의 거래를 통한 이익의 증여 의제",
+      "status": "WARN_PENDING_CHANGE",
+      "class": "WARN",
+      "reason": "현재 유효하나 시행 예정 개정이 있음 (조문이 바뀌거나 삭제될 예정)",
+      "fix": "시행일 전후 어느 조문을 적용하는지 명시한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "국세기본법 제47조의3(과소신고ㆍ초과환급신고가산세) 실존",
+          "source": "국세기본법 (시행 20261002, MST 289999)"
+        }
+      ],
+      "id": "L16",
+      "kind": "law",
+      "law": "국세기본법",
+      "cited_law": "국세기본법",
+      "article": "제47조의3",
+      "claimed_title": "과소신고·초과환급신고 가산세",
+      "cited": "국세기본법 제47조의3",
+      "source_line": "제47조의3",
+      "title": "과소신고ㆍ초과환급신고가산세",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "조세범 처벌법 제3조(조세 포탈 등) 실존",
+          "source": "조세범 처벌법 (시행 20210101, MST 224875)"
+        }
+      ],
+      "id": "L17",
+      "kind": "law",
+      "law": "조세범 처벌법",
+      "cited_law": "조세범 처벌법",
+      "article": "제3조",
+      "claimed_title": "조세 포탈 등",
+      "cited": "조세범 처벌법 제3조",
+      "source_line": "제3조",
+      "title": "조세 포탈 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ALIAS_CHECK",
+          "evidence": "'기한 후 과세관청 조사 전에 국세기본법' → 후보 '국세기본법'",
+          "source": "법제처 법령 검색"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "국세기본법 제45조(수정신고) 실존",
+          "source": "국세기본법 (시행 20261002, MST 289999)"
+        }
+      ],
+      "id": "L18",
+      "kind": "law",
+      "law": "국세기본법",
+      "cited_law": "기한 후 과세관청 조사 전에 국세기본법",
+      "article": "제45조",
+      "claimed_title": "수정신고",
+      "cited": "기한 후 과세관청 조사 전에 국세기본법 제45조",
+      "source_line": "제45조",
+      "title": "수정신고",
+      "status": "OK_ALIAS",
+      "class": "PASS",
+      "reason": "약칭, 정식 법령에서 확인",
+      "fix": "처음 나올 때 정식 법령명을 병기한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L19",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제48조",
+      "claimed_title": "가산세 감면 등",
+      "cited": "제48조",
+      "source_line": "제48조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2001두5347 실존: 대법원 20030220 의결처분취소청구",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 21건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2001두5347",
+      "case_no": "2001두5347",
+      "source_line": "2001두5347",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2004도817 실존: 대법원 20060629 특정범죄가중처벌등에관한법률위반(조세)·특정경제범죄가중처벌등에관한법률위반(횡령)(일부인정된죄명:업무상횡령)·조세범처벌법위반·업무상횡령",
+          "source": "법제처 검색"
+        },
+        {
+          "check": "PRECEDENT_CHECK",
+          "evidence": "후속 인용 100건, 변경 문구 없음",
+          "source": "판례 생사 확인"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2004도817",
+      "case_no": "2004도817",
+      "source_line": "2004도817",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [
+    "L4",
+    "L6",
+    "L8",
+    "L10",
+    "L12",
+    "L13",
+    "L19"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

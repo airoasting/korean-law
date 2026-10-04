@@ -1,0 +1,146 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 1건. 경고를 본문에 반영해야 통과한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "상법 제382조의3(이사의 충실의무 등) 실존",
+          "source": "상법 (시행 20260910, MST 273629)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "상법",
+      "cited_law": "상법",
+      "article": "제382조의3",
+      "cited": "상법 제382조의3",
+      "source_line": "제382조의3",
+      "title": "이사의 충실의무 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 시행령 제4조(안전보건관리체계의 구축 및 이행 조치) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 시행령 (시행 20251001, MST 278597)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률 시행령",
+      "cited_law": "중대재해 처벌 등에 관한 법률 시행령",
+      "article": "제4조",
+      "claimed_title": "안전보건관리체계의 구축 및 이행 조치",
+      "cited": "중대재해 처벌 등에 관한 법률 시행령 제4조",
+      "source_line": "제4조",
+      "title": "안전보건관리체계의 구축 및 이행 조치",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제5조(도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
+      "article": "제5조",
+      "claimed_title": "도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무",
+      "cited": "중대재해 처벌 등에 관한 법률 제5조",
+      "source_line": "제5조",
+      "title": "도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제6조(중대산업재해 사업주와 경영책임자등의 처벌) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
+      "article": "제6조",
+      "cited": "중대재해 처벌 등에 관한 법률 제6조",
+      "source_line": "제6조",
+      "title": "중대산업재해 사업주와 경영책임자등의 처벌",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '양벌규정' ≠ 실제 '중대산업재해의 양벌규정'",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
+      "article": "제7조",
+      "claimed_title": "양벌규정",
+      "cited": "중대재해 처벌 등에 관한 법률 제7조",
+      "source_line": "제7조",
+      "title": "중대산업재해의 양벌규정",
+      "status": "WARN_TITLE_DIFF",
+      "class": "WARN",
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제15조(손해배상의 책임) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "중대재해 처벌 등에 관한 법률",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
+      "article": "제15조",
+      "claimed_title": "손해배상의 책임",
+      "cited": "중대재해 처벌 등에 관한 법률 제15조",
+      "source_line": "제15조",
+      "title": "손해배상의 책임",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

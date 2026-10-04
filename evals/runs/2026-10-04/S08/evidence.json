@@ -1,0 +1,98 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 2건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "형법 제347조(사기) 실존",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제347조",
+      "claimed_title": "사기",
+      "cited": "형법 제347조",
+      "source_line": "제347조",
+      "title": "사기",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "인용 제목 '사기' ≠ 실제 '횡령, 배임'",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제355조",
+      "claimed_title": "사기",
+      "cited": "형법 제355조",
+      "source_line": "제355조",
+      "title": "횡령, 배임",
+      "status": "FAIL_MISMATCH",
+      "class": "FAIL",
+      "reason": "조문 제목 불일치",
+      "fix": "조문 번호와 제목 중 무엇이 맞는지 확인해 고친다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "형법에 제400조가 없다",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제400조",
+      "cited": "형법 제400조",
+      "source_line": "제400조",
+      "status": "FAIL_NOT_FOUND",
+      "class": "FAIL",
+      "reason": "조문 없음",
+      "fix": "올바른 조문 번호를 찾아 고치거나 인용을 뺀다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "법제처 수록 판례에서 찾지 못했다 (하급심·미수록일 수 있어 부존재로 단정하지 않는다)",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2015다951234",
+      "case_no": "2015다951234",
+      "source_line": "2015다951234",
+      "status": "WARN_CASE_UNVERIFIED",
+      "class": "WARN",
+      "reason": "판례 미확인 (부존재 단정 불가)",
+      "fix": "원문을 확인하거나 [미확인]으로 표기한다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

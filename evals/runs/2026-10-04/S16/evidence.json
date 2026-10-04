@@ -1,0 +1,83 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ALIAS_CHECK",
+          "evidence": "'공정거래법' → 독점규제 및 공정거래에 관한 법률",
+          "source": "법제처 법령 검색"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "독점규제 및 공정거래에 관한 법률 제45조(불공정거래행위의 금지) 실존",
+          "source": "독점규제 및 공정거래에 관한 법률 (시행 20261002, MST 290153)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "독점규제 및 공정거래에 관한 법률",
+      "cited_law": "공정거래법",
+      "article": "제45조",
+      "claimed_title": "불공정거래행위의 금지",
+      "cited": "공정거래법 제45조",
+      "source_line": "제45조",
+      "title": "불공정거래행위의 금지",
+      "status": "OK_ALIAS",
+      "class": "PASS",
+      "reason": "약칭, 정식 법령에서 확인",
+      "fix": "처음 나올 때 정식 법령명을 병기한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "하도급거래 공정화에 관한 법률 제4조(부당한 하도급대금의 결정 금지) 실존",
+          "source": "하도급거래 공정화에 관한 법률 (시행 20261002, MST 288625)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "하도급거래 공정화에 관한 법률",
+      "cited_law": "하도급거래 공정화에 관한 법률",
+      "article": "제4조",
+      "cited": "하도급거래 공정화에 관한 법률 제4조",
+      "source_line": "제4조",
+      "title": "부당한 하도급대금의 결정 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "독점규제 및 공정거래에 관한 법률 제45조(불공정거래행위의 금지) 실존",
+          "source": "독점규제 및 공정거래에 관한 법률 (시행 20261002, MST 290153)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "독점규제 및 공정거래에 관한 법률",
+      "cited_law": "독점규제 및 공정거래에 관한 법률",
+      "article": "제45조",
+      "cited": "독점규제 및 공정거래에 관한 법률 제45조",
+      "source_line": "제45조",
+      "title": "불공정거래행위의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

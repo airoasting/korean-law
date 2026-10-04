@@ -1,0 +1,154 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제12조",
+      "claimed_title": "면책",
+      "cited": "제12조",
+      "source_line": "제12조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제6조(일반원칙) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제6조",
+      "claimed_title": "일반원칙",
+      "cited": "약관의 규제에 관한 법률 제6조",
+      "source_line": "제6조",
+      "title": "일반원칙",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제7조",
+      "claimed_title": "면책조항의 금지",
+      "cited": "약관의 규제에 관한 법률 제7조",
+      "source_line": "제7조",
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제15조",
+      "cited": "제15조",
+      "source_line": "제15조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "claimed_title": "배상액의 예정",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법에 제1200조가 없다",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제1200조",
+      "cited": "민법 제1200조",
+      "source_line": "제1200조",
+      "status": "FAIL_NOT_FOUND",
+      "class": "FAIL",
+      "reason": "조문 없음",
+      "fix": "올바른 조문 번호를 찾아 고치거나 인용을 뺀다"
+    }
+  ],
+  "pending_checks": [
+    "L1",
+    "L4"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

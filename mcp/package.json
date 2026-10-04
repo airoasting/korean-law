@@ -1,0 +1,27 @@
+{
+  "name": "korean-law",
+  "version": "1.0.0",
+  "private": true,
+  "description": "법률 문서의 조문·판례 인용을 법제처 국가법령정보센터 Open API로 검증하는 MCP 서버 (korean-law 스킬 엔진)",
+  "type": "module",
+  "bin": { "korean-law": "build/server.js" },
+  "main": "build/server.js",
+  "scripts": {
+    "build": "rm -rf build && tsc",
+    "start": "node build/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "aliases": "npm run build && node scripts/build-law-aliases.mjs"
+  },
+  "engines": { "node": ">=20.19.0" },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.9"
+  }
+}

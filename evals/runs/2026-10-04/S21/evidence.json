@@ -1,0 +1,113 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 2건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 2건. 확인 전에는 PASS를 주지 않는다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제12조",
+      "claimed_title": "면책",
+      "cited": "제12조",
+      "source_line": "제12조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "법령명을 정하지 못한 조문",
+          "source": "인용 추출"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제15조",
+      "cited": "제15조",
+      "source_line": "제15조",
+      "status": "WARN_UNCHECKED",
+      "needs_context": true,
+      "law_candidates": [
+        ""
+      ],
+      "class": "WARN",
+      "reason": "미검증",
+      "fix": "수동으로 확인한다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제398조(배상액의 예정) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제398조",
+      "claimed_title": "배상액의 예정",
+      "cited": "민법 제398조",
+      "source_line": "제398조",
+      "title": "배상액의 예정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "약관의 규제에 관한 법률",
+      "cited_law": "약관의 규제에 관한 법률",
+      "article": "제7조",
+      "claimed_title": "면책조항의 금지",
+      "cited": "약관의 규제에 관한 법률 제7조",
+      "source_line": "제7조",
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [
+    "L1",
+    "L2"
+  ],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

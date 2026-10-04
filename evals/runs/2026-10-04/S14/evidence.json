@@ -1,0 +1,75 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 2건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "DELETED_CHECK",
+          "evidence": "제241조 삭제 <2016.1.6>",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제241조",
+      "claimed_title": "간통",
+      "cited": "형법 제241조",
+      "source_line": "제241조",
+      "status": "FAIL_DELETED",
+      "class": "FAIL",
+      "reason": "삭제된 조문",
+      "fix": "삭제 사실을 반영해 고치거나 인용을 뺀다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "DELETED_CHECK",
+          "evidence": "제304조 삭제 <2012.12.18>",
+          "source": "형법 (시행 20261002, MST 290185)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "형법",
+      "cited_law": "형법",
+      "article": "제304조",
+      "cited": "형법 제304조",
+      "source_line": "제304조",
+      "status": "FAIL_DELETED",
+      "class": "FAIL",
+      "reason": "삭제된 조문",
+      "fix": "삭제 사실을 반영해 고치거나 인용을 뺀다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2009헌바17 실존: 헌법재판소 20150226 형법 제241조 위헌소원",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2009헌바17",
+      "case_no": "2009헌바17",
+      "source_line": "2009헌바17",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

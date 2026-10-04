@@ -1,0 +1,52 @@
+{
+  "schema": "korean-law/evidence@1",
+  "engine": "verify_document",
+  "verdict": "PASS_WITH_WARNINGS",
+  "verdict_ko": "조건부 통과",
+  "reasons": [
+    "WARN 1건. 경고를 본문에 반영해야 통과한다"
+  ],
+  "checked_at": "2026-10-04",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "2004헌마554 실존: 헌법재판소 20041021 신행정수도의건설을위한특별조치법 위헌확인",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C1",
+      "kind": "case",
+      "cited": "2004헌마554",
+      "case_no": "2004헌마554",
+      "source_line": "2004헌마554",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "CASE_CHECK",
+          "evidence": "법제처 수록 판례에서 찾지 못했다 (하급심·미수록일 수 있어 부존재로 단정하지 않는다)",
+          "source": "법제처 검색"
+        }
+      ],
+      "id": "C2",
+      "kind": "case",
+      "cited": "2019도987654",
+      "case_no": "2019도987654",
+      "source_line": "2019도987654",
+      "status": "WARN_CASE_UNVERIFIED",
+      "class": "WARN",
+      "reason": "판례 미확인 (부존재 단정 불가)",
+      "fix": "원문을 확인하거나 [미확인]으로 표기한다"
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}
