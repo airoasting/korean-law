@@ -1,13 +1,10 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
-  "verdict": "PASS_WITH_WARNINGS",
-  "verdict_ko": "조건부 통과",
-  "reasons": [
-    "WARN 2건. 경고를 본문에 반영해야 통과한다",
-    "문맥 확인이 필요한 인용 2건. 확인 전에는 PASS를 주지 않는다"
-  ],
-  "checked_at": "2026-10-04",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [],
   "items": [
@@ -15,8 +12,8 @@
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
-          "source": "인용 추출"
+          "evidence": "본 계약서 제12조(면책)는 사업자의 고의·중과실 책임까지 배제하고 있어 수정이 필요하다.",
+          "source": "문서 자체의 조항 (인용 추출)"
         }
       ],
       "id": "L1",
@@ -27,21 +24,17 @@
       "claimed_title": "면책",
       "cited": "제12조",
       "source_line": "제12조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
     },
     {
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
-          "source": "인용 추출"
+          "evidence": "계약서 제15조의 지체상금 조항은 민법 제398조(배상액의 예정)에 따라 법원이 감액할 수 있다.",
+          "source": "문서 자체의 조항 (인용 추출)"
         }
       ],
       "id": "L2",
@@ -51,14 +44,10 @@
       "article": "제15조",
       "cited": "제15조",
       "source_line": "제15조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
     },
     {
       "evidence": [
@@ -105,9 +94,6 @@
       "fix": ""
     }
   ],
-  "pending_checks": [
-    "L1",
-    "L2"
-  ],
+  "pending_checks": [],
   "data_source": "법제처 국가법령정보센터 Open API"
 }

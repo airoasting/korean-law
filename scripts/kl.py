@@ -17,7 +17,7 @@ import re
 import sys
 from pathlib import Path
 
-SCHEMA = "korean-law/evidence@1"
+SCHEMA = "korean-law/evidence@2"
 
 # 상태 → (등급, 설명, 기본 수정 안내). 엔진 mcp/src/verdict.ts 의 GATE_STATUS와 같은 표다
 STATUS = {
@@ -41,11 +41,12 @@ STATUS = {
     "WARN_LAW_UNRESOLVED": ("WARN", "법령명 미확인", "정식 법령명을 확인한다"),
     "WARN_ALIAS_UNREGISTERED": ("WARN", "법제처 약칭 사전에 없는 약칭", "처음 나올 때 정식 법령명을 병기한다"),
     "WARN_UNCHECKED": ("WARN", "미검증", "수동으로 확인한다"),
+    "ERROR_LOOKUP": ("ERROR", "조회 실패 (검증하지 못함)", "인증키·네트워크·요청 상한을 확인하고 다시 검증한다"),
     "EXCLUDED": ("SKIP", "법령 인용 아님 (문서 자체의 조항)", ""),
     "REPLACED": ("SKIP", "법령명을 문맥으로 특정해 다른 항목으로 재검증함", ""),
 }
 
-VERDICT_KO = {"PASS": "통과", "PASS_WITH_WARNINGS": "조건부 통과", "FAIL": "반려", "NO_CITATIONS": "인용 없음"}
+VERDICT_KO = {"PASS": "통과", "PASS_WITH_WARNINGS": "조건부 통과", "FAIL": "반려", "INCOMPLETE": "검증 미완료", "NO_CITATIONS": "인용 없음"}
 
 SCOPE_GUIDE = ("원문에서 그 조문이 나온 문장을 읽는다. 문서 자체의 조항(계약서 제12조 등)이면 EXCLUDED, evidence는 input.md의 그 문장을 그대로 복사. "
                "같은 문단 앞 문장이 법령을 분명히 가리키면 '<법령명> 제N조(원문 제목)'로 고쳐 재검증 묶음(document-2)에 넣고 REPLACED. "
@@ -114,6 +115,9 @@ def cmd_parse(a: argparse.Namespace) -> None:
             counters[it["kind"]] += 1
             it["id"] = f"{'L' if it['kind'] == 'law' else 'C'}{counters[it['kind']]}"
             it["checks"] = ["SCOPE_CHECK"] if it.get("needs_context") else []
+            # 엔진이 앞 법령에서 법령명을 추정한 항목. 확인은 의무가 아니지만, 원문과 다르면 SCOPE_CHECK로 바로잡을 수 있다
+            if any(e.get("check") == "LAW_INFERRED" for e in it.get("evidence", [])):
+                it["optional_checks"] = ["SCOPE_CHECK"]
             items.append(it)
     (run / "items.json").write_text(json.dumps({"items": items, "normalize_changes": changes}, ensure_ascii=False, indent=2),
                                     encoding="utf-8")
@@ -126,6 +130,14 @@ def cmd_parse(a: argparse.Namespace) -> None:
         print("- 없음. overrides.json은 빈 배열 []로 만든다")
     else:
         print(f"\n확인 방법\n- SCOPE_CHECK: {SCOPE_GUIDE}")
+    guessed = [it for it in items if it.get("optional_checks")]
+    if guessed:
+        print("\n엔진이 법령명을 추정한 항목 (원문과 맞는지 훑어본다. 틀렸을 때만 SCOPE_CHECK로 기록한다)")
+        for it in guessed:
+            print(f"- {it['id']} {it['cited']}  ← {it['evidence'][0]['evidence']}")
+    errors = [it for it in items if it.get("status") == "ERROR_LOOKUP"]
+    if errors:
+        print(f"\n[주의] 조회 실패 {len(errors)}건. 인증키·네트워크·요청 상한을 확인하고 verify_document를 다시 돌린다")
 
 
 # ---------------------------------------------------------------- build
@@ -152,7 +164,11 @@ def compute_verdict(items: list[dict], pending: list[dict]) -> tuple[str, list[s
         return "NO_CITATIONS", ["검증할 인용이 없다. 통과가 아니라 '검증할 것이 없음'이다"]
     classes = [STATUS[it["status"]][0] for it in items]
     if "FAIL" in classes:
-        return "FAIL", [f"FAIL {classes.count('FAIL')}건. 점수와 무관하게 반려한다"]
+        extra = [f"조회 실패 {classes.count('ERROR')}건은 검증하지 못했다. 고친 뒤 다시 검증한다"] if "ERROR" in classes else []
+        return "FAIL", [f"FAIL {classes.count('FAIL')}건. 점수와 무관하게 반려한다"] + extra
+    if "ERROR" in classes:
+        # 검증하지 못한 인용을 경고로 덮으면 게이트가 열린다. 통과 계열 판정을 내지 않는다
+        return "INCOMPLETE", [f"조회 실패 {classes.count('ERROR')}건. 검증을 끝내지 못했다. 인증키·네트워크·요청 상한을 확인하고 다시 돌린다"]
     reasons: list[str] = []
     if "WARN" in classes:
         reasons.append(f"WARN {classes.count('WARN')}건. 경고를 본문에 반영해야 통과한다")
@@ -182,7 +198,7 @@ def cmd_build(a: argparse.Namespace) -> None:
             by_id[it["id"]] = it
             done[it["id"]] = set()
         chk = o.get("check")
-        if chk and chk != "MANUAL" and chk not in it.get("checks", []) and not it.get("added"):
+        if chk and chk != "MANUAL" and chk not in it.get("checks", []) + it.get("optional_checks", []) and not it.get("added"):
             # parse가 요구하지 않은 확인 기록이다. 낡은 기록일 수 있으니 판정에 쓰지 않는다
             stale.append(f"{o['id']} {chk}")
             continue
@@ -216,7 +232,7 @@ def cmd_build(a: argparse.Namespace) -> None:
 
     def count(kind: str) -> dict:
         sub = [it for it in items if it["kind"] == kind]
-        return {"total": len(sub), **{c: sum(1 for it in sub if it["class"] == c) for c in ("PASS", "WARN", "FAIL", "SKIP")}}
+        return {"total": len(sub), **{c: sum(1 for it in sub if it["class"] == c) for c in ("PASS", "WARN", "FAIL", "ERROR", "SKIP")}}
 
     ev = {
         "schema": SCHEMA,
@@ -244,6 +260,11 @@ def _cell(s) -> str:
     return str(s or "").replace("|", "\\|").replace("\n", " ")
 
 
+def _count_line(k: dict) -> str:
+    err = f", 조회 실패 {k['ERROR']}" if k.get("ERROR") else ""
+    return f"{k['total']}건 (통과 {k['PASS']}, 경고 {k['WARN']}, 실패 {k['FAIL']}{err})"
+
+
 def render_md(ev: dict) -> str:
     c = ev["counts"]
     out = [
@@ -251,12 +272,12 @@ def render_md(ev: dict) -> str:
         "",
         f"- 판정: **{ev['verdict']} ({ev['verdict_ko']})**",
         f"- 확인일: {ev['checked_at']}" + (f" · 기준일: {ev['base_date']}" if ev.get("base_date") else ""),
-        f"- 법령 인용 {c['law']['total']}건 (통과 {c['law']['PASS']}, 경고 {c['law']['WARN']}, 실패 {c['law']['FAIL']})"
-        f" · 판례 인용 {c['case']['total']}건 (통과 {c['case']['PASS']}, 경고 {c['case']['WARN']}, 실패 {c['case']['FAIL']})",
+        f"- 법령 인용 {_count_line(c['law'])} · 판례 인용 {_count_line(c['case'])}",
     ]
     out += [f"- {r}" for r in ev["reasons"]]
     out.append("")
-    groups = [("FAIL", "반려 사유"), ("WARN", "경고"), ("PASS", "통과"), ("SKIP", "판정에서 뺀 항목 (문서 자체 조항, 재검증으로 대체)")]
+    groups = [("ERROR", "조회 실패 (검증하지 못함)"), ("FAIL", "반려 사유"), ("WARN", "경고"), ("PASS", "통과"),
+              ("SKIP", "판정에서 뺀 항목 (문서 자체 조항, 재검증으로 대체)")]
     for cls, title in groups:
         rows = [it for it in ev["items"] if it["class"] == cls]
         if not rows:

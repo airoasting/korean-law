@@ -123,3 +123,12 @@ export function itemNumbers(unit: Record<string, any>, paragraph?: number): numb
   const pool = paragraph ? paragraphs(unit).filter((p) => paragraphNumber(p.항번호) === paragraph) : [unit, ...paragraphs(unit)]
   return pool.flatMap((p) => list<Record<string, any>>(p.호).map((h) => parseInt(text(h.호번호), 10))).filter(Number.isFinite)
 }
+
+/** 그 호 아래 목 글자들. "가." → "가" */
+export function subItemLetters(unit: Record<string, any>, paragraph: number | undefined, item: number): string[] {
+  const pool = paragraph ? paragraphs(unit).filter((p) => paragraphNumber(p.항번호) === paragraph) : [unit, ...paragraphs(unit)]
+  return pool.flatMap((p) => list<Record<string, any>>(p.호))
+    .filter((h) => parseInt(text(h.호번호), 10) === item)
+    .flatMap((h) => list<Record<string, any>>(h.목).map((m) => text(m.목번호).trim().charAt(0)))
+    .filter((ch) => /[가-힣]/u.test(ch))
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "korean-law/evidence@2",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-05",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제23조(해고 등의 제한) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제23조",
+      "claimed_title": "해고 등의 제한",
+      "cited": "근로기준법 제23조",
+      "source_line": "제23조",
+      "title": "해고 등의 제한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "해고에는 근로기준법 제23조(해고 등의 제한)에 따른 정당한 이유가 필요하고, 회사 취업규칙 제5조(징계의 종류)와 단체협약 제12조(해고 협의)도 함께 본다.",
+          "source": "문서 자체의 조항 (인용 추출)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제5조",
+      "claimed_title": "징계의 종류",
+      "cited": "제5조",
+      "source_line": "제5조",
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "해고에는 근로기준법 제23조(해고 등의 제한)에 따른 정당한 이유가 필요하고, 회사 취업규칙 제5조(징계의 종류)와 단체협약 제12조(해고 협의)도 함께 본다.",
+          "source": "문서 자체의 조항 (인용 추출)"
+        }
+      ],
+      "id": "L3",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제12조",
+      "claimed_title": "해고 협의",
+      "cited": "제12조",
+      "source_line": "제12조",
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "인사위원회 소집은 내부 지침 제3조(보고 절차)를 따른다.",
+          "source": "문서 자체의 조항 (인용 추출)"
+        }
+      ],
+      "id": "L4",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제3조",
+      "claimed_title": "보고 절차",
+      "cited": "제3조",
+      "source_line": "제3조",
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "본 계약서 제9조(계약의 해지)는 민법 제543조(해지, 해제권)와 충돌하지 않는다.",
+          "source": "문서 자체의 조항 (인용 추출)"
+        }
+      ],
+      "id": "L5",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제9조",
+      "claimed_title": "계약의 해지",
+      "cited": "제9조",
+      "source_line": "제9조",
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "민법 제543조(해지, 해제권) 실존",
+          "source": "민법 (시행 20260317, MST 284415)"
+        }
+      ],
+      "id": "L6",
+      "kind": "law",
+      "law": "민법",
+      "cited_law": "민법",
+      "article": "제543조",
+      "claimed_title": "해지, 해제권",
+      "cited": "민법 제543조",
+      "source_line": "제543조",
+      "title": "해지, 해제권",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

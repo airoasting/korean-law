@@ -1,12 +1,12 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "PASS_WITH_WARNINGS",
   "verdict_ko": "조건부 통과",
   "reasons": [
     "WARN 1건. 경고를 본문에 반영해야 통과한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [],
   "items": [

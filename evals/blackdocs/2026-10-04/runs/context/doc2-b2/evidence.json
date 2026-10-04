@@ -1,5 +1,5 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "PASS",
   "verdict_ko": "통과",
@@ -150,7 +150,7 @@
       "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "article": "제2조",
-      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제3호",
       "source_line": "제2조 제3호",
       "title": "정의",
       "status": "OK",

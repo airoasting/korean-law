@@ -3,6 +3,7 @@ import { tmpdir } from "node:os"
 import { join } from "node:path"
 import { describe, expect, it } from "vitest"
 import { BudgetExceeded, LawApi, DrfError, list, text } from "../src/http.js"
+import { verifyDocument } from "../src/verify.js"
 import { loadEnv } from "../src/env.js"
 import { scanBody } from "../src/citator.js"
 import { computeVerdict, isAliasShaped, isBareDecree, isDeletedUnit, makeItem, titleKey, unitText, citedDates } from "../src/verdict.js"
@@ -85,6 +86,11 @@ describe("판정 규칙", () => {
     expect(computeVerdict([ok], 1).verdict).toBe("PASS_WITH_WARNINGS")
     expect(computeVerdict([ok, fail]).verdict).toBe("FAIL")
     expect(computeVerdict([]).verdict).toBe("NO_CITATIONS")
+    const err = makeItem({ id: "L3", kind: "law", cited: "민법 제2조", status: "ERROR_LOOKUP", source_line: "" })
+    expect(computeVerdict([ok, err]).verdict).toBe("INCOMPLETE")
+    expect(computeVerdict([ok, err, fail]).verdict).toBe("FAIL")
+    const self = makeItem({ id: "L4", kind: "law", cited: "제12조", status: "EXCLUDED", source_line: "" })
+    expect(computeVerdict([ok, self]).verdict).toBe("PASS")
   })
 })
 
@@ -95,5 +101,19 @@ describe("조문 구조와 연혁", () => {
     expect(itemNumbers(unit, 1)).toEqual([1, 2])
     const v = (efYd: string, mst: string) => ({ efYd, mst } as LawRow)
     expect(versionAt([v("20270101", "3"), v("20261002", "2"), v("20260820", "1")], "20261004")?.mst).toBe("2")
+  })
+})
+
+describe("인증키 없음", () => {
+  it("판정을 내지 않고 오류로 멈춘다", async () => {
+    const api = new LawApi({ apiKey: "" })
+    await expect(verifyDocument(api, { text: "민법 제750조" })).rejects.toBeInstanceOf(DrfError)
+  })
+  it("조회가 실패하면 조건부 통과가 아니라 검증 미완료다", async () => {
+    const { f } = fakeFetch([{ status: 500, body: "" }])
+    const api = new LawApi({ apiKey: "K", fetchImpl: f, retries: 0, cacheTtlMs: 0 })
+    const { evidence } = await verifyDocument(api, { text: "민법 제750조와 대법원 2013다61381 판결", citeCheck: false })
+    expect(evidence.verdict).toBe("INCOMPLETE")
+    expect(evidence.items.every((i) => i.status === "ERROR_LOOKUP")).toBe(true)
   })
 })

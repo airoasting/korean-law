@@ -1,0 +1,59 @@
+{
+  "schema": "korean-law/evidence@2",
+  "engine": "verify_document",
+  "verdict": "FAIL",
+  "verdict_ko": "반려",
+  "reasons": [
+    "FAIL 1건. 점수와 무관하게 반려한다"
+  ],
+  "checked_at": "2026-10-05",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "SUBITEM_CHECK",
+          "evidence": "제3호에 하목이 없다 (가목~바목)",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제2조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제3호 하목",
+      "source_line": "제2조 제3호 하목",
+      "title": "정의",
+      "status": "FAIL_NOT_FOUND",
+      "class": "FAIL",
+      "reason": "조문 없음",
+      "fix": "올바른 조문 번호를 찾아 고치거나 인용을 뺀다"
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제18조(벌칙) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
+      "article": "제18조",
+      "claimed_title": "벌칙",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제18조",
+      "source_line": "제18조",
+      "title": "벌칙",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

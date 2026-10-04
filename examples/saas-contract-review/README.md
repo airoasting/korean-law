@@ -17,9 +17,9 @@ AI가 흔히 쓰는 형태의 계약서 검토 메모([input.md](input.md))에 �
 | 약관법 제7조, 제6조 | 문서 안에서 정의한 약칭 `(이하 '약관법')` | ✓ 정식 명칭으로 풀어 통과 |
 | 민법 398조 | '제'가 빠진 표기 | ✓ 정규화 후 통과 |
 | 개인정보 보호법 제17조 | 정상 인용 | ✓ 통과 |
-| 본 약관 제11조(책임의 제한) | 법령이 아니라 검토 대상 약관 자체의 조항 | 문맥 확인으로 판정에서 제외 (`EXCLUDED`) |
+| 본 약관 제11조(책임의 제한) | 법령이 아니라 검토 대상 약관 자체의 조항 | 엔진이 판정에서 제외 (`EXCLUDED`). 마지막 문단의 '제11조는'도 같은 조항으로 본다 |
 
-진짜 인용 5건은 모두 통과했고, 심어 둔 오류 4건은 모두 걸렸다.
+진짜 인용 4건은 모두 통과했고, 심어 둔 오류 4건은 모두 걸렸다.
 
 ## 실행 폴더
 
@@ -28,7 +28,7 @@ AI가 흔히 쓰는 형태의 계약서 검토 메모([input.md](input.md))에 �
 | `run/input.md`, `run/meta.json` | `kl.py init` |
 | `run/raw/document-1.json` | `verify_document` 응답 |
 | `run/items.json` | `kl.py parse` |
-| `run/overrides.json` | 문맥 확인 (제11조를 `EXCLUDED`로) |
+| `run/overrides.json` | 문맥 확인 결과. 이 예시는 엔진이 모두 정해 빈 배열 `[]`이다 |
 | `run/evidence.json`, `run/evidence.md` | `kl.py build` |
 
 ## 다시 돌려 보기
@@ -47,7 +47,11 @@ node mcp/scripts/verify-file.mjs /tmp/kl-example/input.md > /tmp/kl-example/raw/
 python3 scripts/kl.py parse /tmp/kl-example
 ```
 
-`overrides.json`을 만들고(이 예시의 `run/overrides.json`을 복사해도 된다) 마지막으로:
+문맥 확인 목록이 '없음'이면 `overrides.json`을 `[]`로 만들고 마지막으로:
+
+```bash
+echo '[]' > /tmp/kl-example/overrides.json
+```
 
 ```bash
 python3 scripts/kl.py build /tmp/kl-example

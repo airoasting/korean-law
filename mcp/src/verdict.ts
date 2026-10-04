@@ -5,7 +5,7 @@
 
 import { reEscape } from "./text.js"
 
-export type GateClass = "PASS" | "WARN" | "FAIL" | "SKIP"
+export type GateClass = "PASS" | "WARN" | "FAIL" | "SKIP" | "ERROR"
 
 export const GATE_STATUS = {
   OK: ["PASS", "실존 확인", ""],
@@ -28,12 +28,15 @@ export const GATE_STATUS = {
   WARN_LAW_UNRESOLVED: ["WARN", "법령명 미확인", "정식 법령명을 확인한다"],
   WARN_ALIAS_UNREGISTERED: ["WARN", "법제처 약칭 사전에 없는 약칭", "처음 나올 때 정식 법령명을 병기한다"],
   WARN_UNCHECKED: ["WARN", "미검증", "수동으로 확인한다"],
+  ERROR_LOOKUP: ["ERROR", "조회 실패 (검증하지 못함)", "인증키·네트워크·요청 상한을 확인하고 다시 검증한다"],
+  EXCLUDED: ["SKIP", "법령 인용 아님 (문서 자체의 조항)", ""],
+  REPLACED: ["SKIP", "법령명을 문맥으로 특정해 다른 항목으로 재검증함", ""],
 } as const satisfies Record<string, readonly [GateClass, string, string]>
 
 export type GateStatus = keyof typeof GATE_STATUS
-export type GateVerdict = "PASS" | "PASS_WITH_WARNINGS" | "FAIL" | "NO_CITATIONS"
+export type GateVerdict = "PASS" | "PASS_WITH_WARNINGS" | "FAIL" | "INCOMPLETE" | "NO_CITATIONS"
 export const VERDICT_KO: Record<GateVerdict, string> = {
-  PASS: "통과", PASS_WITH_WARNINGS: "조건부 통과", FAIL: "반려", NO_CITATIONS: "인용 없음",
+  PASS: "통과", PASS_WITH_WARNINGS: "조건부 통과", FAIL: "반려", INCOMPLETE: "검증 미완료", NO_CITATIONS: "인용 없음",
 }
 
 export interface GateItem {
@@ -143,7 +146,12 @@ export function computeVerdict(items: GateItem[], pendingCount = 0): { verdict: 
   const live = items.filter((i) => i.class !== "SKIP")
   if (live.length === 0) return { verdict: "NO_CITATIONS", reasons: ["검증할 인용이 없다. 통과가 아니라 '검증할 것이 없음'이다"] }
   const count = (c: GateClass) => live.filter((i) => i.class === c).length
-  if (count("FAIL") > 0) return { verdict: "FAIL", reasons: [`FAIL ${count("FAIL")}건. 점수와 무관하게 반려한다`] }
+  if (count("FAIL") > 0) {
+    const extra = count("ERROR") ? [`조회 실패 ${count("ERROR")}건은 검증하지 못했다. 고친 뒤 다시 검증한다`] : []
+    return { verdict: "FAIL", reasons: [`FAIL ${count("FAIL")}건. 점수와 무관하게 반려한다`, ...extra] }
+  }
+  // 조회가 실패한 인용이 있으면 통과 계열 판정을 내지 않는다. 검증하지 못한 것을 경고로 덮으면 게이트가 열린다
+  if (count("ERROR") > 0) return { verdict: "INCOMPLETE", reasons: [`조회 실패 ${count("ERROR")}건. 검증을 끝내지 못했다. 인증키·네트워크·요청 상한을 확인하고 다시 돌린다`] }
   const reasons: string[] = []
   if (count("WARN") > 0) reasons.push(`WARN ${count("WARN")}건. 경고를 본문에 반영해야 통과한다`)
   if (pendingCount > 0) reasons.push(`문맥 확인이 필요한 인용 ${pendingCount}건. 확인 전에는 PASS를 주지 않는다`)

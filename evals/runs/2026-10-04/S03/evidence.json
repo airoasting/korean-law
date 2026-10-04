@@ -1,12 +1,12 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "FAIL",
   "verdict_ko": "반려",
   "reasons": [
     "FAIL 1건. 점수와 무관하게 반려한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [],
   "items": [

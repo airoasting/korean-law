@@ -1,13 +1,13 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "PASS_WITH_WARNINGS",
   "verdict_ko": "조건부 통과",
   "reasons": [
-    "WARN 6건. 경고를 본문에 반영해야 통과한다",
-    "문맥 확인이 필요한 인용 6건. 확인 전에는 PASS를 주지 않는다"
+    "WARN 2건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 1건. 확인 전에는 PASS를 주지 않는다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [
     {
@@ -83,7 +83,7 @@
       "law": "상법",
       "cited_law": "상법",
       "article": "제393조",
-      "cited": "상법 제393조",
+      "cited": "상법 제393조 제2항",
       "source_line": "제393조 제2항",
       "title": "이사회의 권한",
       "status": "OK",
@@ -94,26 +94,28 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「상법」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "상법 제382조의3(이사의 충실의무 등) 실존",
+          "source": "상법 (시행 20260910, MST 273629)"
         }
       ],
       "id": "L4",
       "kind": "law",
-      "law": "",
+      "law": "상법",
       "cited_law": "",
       "article": "제382조의3",
-      "cited": "제382조의3",
+      "cited": "상법 제382조의3",
       "source_line": "제382조의3",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "이사의 충실의무 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -182,70 +184,76 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "부모 법령이 없는 '시행령'",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「중대재해 처벌 등에 관한 법률 시행령」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 시행령 제4조(안전보건관리체계의 구축 및 이행 조치) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 시행령 (시행 20251001, MST 278597)"
         }
       ],
       "id": "L8",
       "kind": "law",
-      "law": "시행령",
-      "cited_law": "시행령",
+      "law": "중대재해 처벌 등에 관한 법률 시행령",
+      "cited_law": "",
       "article": "제4조",
       "claimed_title": "안전보건관리체계의 구축 및 이행 조치",
-      "cited": "시행령 제4조",
+      "cited": "중대재해 처벌 등에 관한 법률 시행령 제4조",
       "source_line": "제4조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "안전보건관리체계의 구축 및 이행 조치",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「중대재해 처벌 등에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제5조(도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
         }
       ],
       "id": "L9",
       "kind": "law",
-      "law": "",
+      "law": "중대재해 처벌 등에 관한 법률",
       "cited_law": "",
       "article": "제5조",
       "claimed_title": "도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무",
-      "cited": "제5조",
+      "cited": "중대재해 처벌 등에 관한 법률 제5조",
       "source_line": "제5조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "도급, 용역, 위탁 등 관계에서의 안전 및 보건 확보의무",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "evidence": "법령명이 없다. 같은 문단의 「중대재해 처벌 등에 관한 법률」일 가능성이 높다 (그 법령으로 조회하면 OK)",
           "source": "인용 추출"
         }
       ],
       "id": "L10",
       "kind": "law",
       "law": "",
-      "cited_law": "",
+      "cited_law": "중대재해 처벌 등에 관한 법률",
       "article": "제6조",
       "cited": "제6조",
       "source_line": "제6조",
       "status": "WARN_UNCHECKED",
       "needs_context": true,
       "law_candidates": [
-        ""
+        "중대재해 처벌 등에 관한 법률"
       ],
       "class": "WARN",
       "reason": "미검증",
@@ -254,52 +262,56 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「중대재해 처벌 등에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "TITLE_CHECK",
+          "evidence": "본문 제목 '양벌규정' ≠ 실제 '중대산업재해의 양벌규정'",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
         }
       ],
       "id": "L11",
       "kind": "law",
-      "law": "",
+      "law": "중대재해 처벌 등에 관한 법률",
       "cited_law": "",
       "article": "제7조",
       "claimed_title": "양벌규정",
-      "cited": "제7조",
+      "cited": "중대재해 처벌 등에 관한 법률 제7조",
       "source_line": "제7조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
+      "title": "중대산업재해의 양벌규정",
+      "status": "WARN_TITLE_DIFF",
       "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "reason": "인용한 조문 제목이 실제 제목과 다름 (엔진은 일치로 봄)",
+      "fix": "조문 제목을 실제 제목으로 고친다"
     },
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「중대재해 처벌 등에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "중대재해 처벌 등에 관한 법률 제15조(손해배상의 책임) 실존",
+          "source": "중대재해 처벌 등에 관한 법률 (시행 20220127, MST 228817)"
         }
       ],
       "id": "L12",
       "kind": "law",
-      "law": "",
+      "law": "중대재해 처벌 등에 관한 법률",
       "cited_law": "",
       "article": "제15조",
       "claimed_title": "손해배상의 책임",
-      "cited": "제15조",
+      "cited": "중대재해 처벌 등에 관한 법률 제15조",
       "source_line": "제15조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "손해배상의 책임",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -394,12 +406,7 @@
     }
   ],
   "pending_checks": [
-    "L4",
-    "L8",
-    "L9",
-    "L10",
-    "L11",
-    "L12"
+    "L10"
   ],
   "data_source": "법제처 국가법령정보센터 Open API"
 }

@@ -47,6 +47,10 @@ export class LawApi {
     return this.budget.run({ left: limit }, fn)
   }
 
+  get hasKey(): boolean {
+    return !!this.opt.apiKey
+  }
+
   mask(text: string): string {
     return this.opt.apiKey ? text.split(this.opt.apiKey).join("***") : text
   }

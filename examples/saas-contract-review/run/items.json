@@ -4,8 +4,8 @@
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
-          "source": "인용 추출"
+          "evidence": "## 2. 책임제한 조항 (약관 제11조)",
+          "source": "문서 자체의 조항 (인용 추출)"
         }
       ],
       "id": "L1",
@@ -15,17 +15,11 @@
       "article": "제11조",
       "cited": "제11조",
       "source_line": "제11조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다",
-      "checks": [
-        "SCOPE_CHECK"
-      ]
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": "",
+      "checks": []
     },
     {
       "evidence": [

@@ -1,12 +1,12 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "FAIL",
   "verdict_ko": "반려",
   "reasons": [
     "FAIL 1건. 점수와 무관하게 반려한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [],
   "items": [
@@ -83,21 +83,21 @@
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "evidence": "법령명이 없다. 같은 문단의 「약관의 규제에 관한 법률」일 가능성이 높다 (그 법령으로 조회하면 OK)",
           "source": "인용 추출"
         }
       ],
       "id": "L4",
       "kind": "law",
       "law": "",
-      "cited_law": "",
+      "cited_law": "약관의 규제에 관한 법률",
       "article": "제15조",
       "cited": "제15조",
       "source_line": "제15조",
       "status": "WARN_UNCHECKED",
       "needs_context": true,
       "law_candidates": [
-        ""
+        "약관의 규제에 관한 법률"
       ],
       "class": "WARN",
       "reason": "미검증",

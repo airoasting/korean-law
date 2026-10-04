@@ -1,13 +1,12 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "PASS_WITH_WARNINGS",
   "verdict_ko": "조건부 통과",
   "reasons": [
-    "WARN 5건. 경고를 본문에 반영해야 통과한다",
-    "문맥 확인이 필요한 인용 4건. 확인 전에는 PASS를 주지 않는다"
+    "WARN 1건. 경고를 본문에 반영해야 통과한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [
     {
@@ -55,7 +54,7 @@
       "law": "약관의 규제에 관한 법률",
       "cited_law": "약관의 규제에 관한 법률",
       "article": "제2조",
-      "cited": "약관의 규제에 관한 법률 제2조",
+      "cited": "약관의 규제에 관한 법률 제2조 제1호",
       "source_line": "제2조 제1호",
       "title": "정의",
       "status": "OK",
@@ -88,51 +87,55 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「약관의 규제에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제3조(약관의 작성 및 설명의무 등) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
         }
       ],
       "id": "L3",
       "kind": "law",
-      "law": "",
+      "law": "약관의 규제에 관한 법률",
       "cited_law": "",
       "article": "제3조",
-      "cited": "제3조",
+      "cited": "약관의 규제에 관한 법률 제3조 제4항",
       "source_line": "제3조 제4항",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "약관의 작성 및 설명의무 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「약관의 규제에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제4조(개별 약정의 우선) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
         }
       ],
       "id": "L4",
       "kind": "law",
-      "law": "",
+      "law": "약관의 규제에 관한 법률",
       "cited_law": "",
       "article": "제4조",
       "claimed_title": "개별약정의 우선",
-      "cited": "제4조",
+      "cited": "약관의 규제에 관한 법률 제4조",
       "source_line": "제4조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "개별 약정의 우선",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -159,27 +162,29 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「약관의 규제에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제7조(면책조항의 금지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
         }
       ],
       "id": "L6",
       "kind": "law",
-      "law": "",
+      "law": "약관의 규제에 관한 법률",
       "cited_law": "",
       "article": "제7조",
       "claimed_title": "면책조항의 금지",
-      "cited": "제7조",
+      "cited": "약관의 규제에 관한 법률 제7조",
       "source_line": "제7조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "면책조항의 금지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -260,7 +265,7 @@
       "law": "약관의 규제에 관한 법률",
       "cited_law": "약관의 규제에 관한 법률",
       "article": "제7조",
-      "cited": "약관의 규제에 관한 법률 제7조",
+      "cited": "약관의 규제에 관한 법률 제7조 제2호",
       "source_line": "제7조 제2호",
       "title": "면책조항의 금지",
       "status": "OK",
@@ -287,13 +292,13 @@
       "cited_law": "나 민법",
       "article": "제103조",
       "claimed_title": "반사회질서의 법률행위",
-      "cited": "나 민법 제103조",
+      "cited": "민법 제103조",
       "source_line": "제103조",
       "title": "반사회질서의 법률행위",
-      "status": "OK_ALIAS",
+      "status": "OK",
       "class": "PASS",
-      "reason": "약칭, 정식 법령에서 확인",
-      "fix": "처음 나올 때 정식 법령명을 병기한다"
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -342,27 +347,29 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「약관의 규제에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "약관의 규제에 관한 법률 제9조(계약의 해제ㆍ해지) 실존",
+          "source": "약관의 규제에 관한 법률 (시행 20240807, MST 260021)"
         }
       ],
       "id": "L14",
       "kind": "law",
-      "law": "",
+      "law": "약관의 규제에 관한 법률",
       "cited_law": "",
       "article": "제9조",
       "claimed_title": "계약의 해제·해지",
-      "cited": "제9조",
+      "cited": "약관의 규제에 관한 법률 제9조",
       "source_line": "제9조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "계약의 해제ㆍ해지",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -411,11 +418,6 @@
       "fix": ""
     }
   ],
-  "pending_checks": [
-    "L3",
-    "L4",
-    "L6",
-    "L14"
-  ],
+  "pending_checks": [],
   "data_source": "법제처 국가법령정보센터 Open API"
 }

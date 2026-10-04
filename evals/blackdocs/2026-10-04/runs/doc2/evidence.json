@@ -1,13 +1,13 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "PASS_WITH_WARNINGS",
   "verdict_ko": "조건부 통과",
   "reasons": [
-    "WARN 10건. 경고를 본문에 반영해야 통과한다",
-    "문맥 확인이 필요한 인용 7건. 확인 전에는 PASS를 주지 않는다"
+    "WARN 5건. 경고를 본문에 반영해야 통과한다",
+    "문맥 확인이 필요한 인용 2건. 확인 전에는 PASS를 주지 않는다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [
     {
@@ -55,7 +55,7 @@
       "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "article": "제2조",
-      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제2호",
       "source_line": "제2조 제2호",
       "title": "정의",
       "status": "OK",
@@ -120,8 +120,8 @@
       "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "article": "제2조",
-      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조",
-      "source_line": "제2조 제3호",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제3호 마목",
+      "source_line": "제2조 제3호 마목",
       "title": "정의",
       "status": "OK",
       "class": "PASS",
@@ -153,52 +153,56 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「부정경쟁방지 및 영업비밀보호에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제14조의2(손해액의 추정 등) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
         }
       ],
       "id": "L6",
       "kind": "law",
-      "law": "",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "",
       "article": "제14조의2",
       "claimed_title": "손해액의 추정 등",
-      "cited": "제14조의2",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제14조의2",
       "source_line": "제14조의2",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "손해액의 추정 등",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문단의 「부정경쟁방지 및 영업비밀보호에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제14조의4(비밀유지명령) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
         }
       ],
       "id": "L7",
       "kind": "law",
-      "law": "",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "",
       "article": "제14조의4",
       "claimed_title": "비밀유지명령",
-      "cited": "제14조의4",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제14조의4",
       "source_line": "제14조의4",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "비밀유지명령",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -213,7 +217,7 @@
       "law": "저작권법",
       "cited_law": "저작권법",
       "article": "제4조",
-      "cited": "저작권법 제4조",
+      "cited": "저작권법 제4조 제1항 제9호",
       "source_line": "제4조 제1항 제9호",
       "title": "저작물의 예시 등",
       "status": "OK",
@@ -224,46 +228,48 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「저작권법」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "저작권법 제9조(업무상저작물의 저작자) 실존",
+          "source": "저작권법 (시행 20260811, MST 283335)"
         }
       ],
       "id": "L9",
       "kind": "law",
-      "law": "",
+      "law": "저작권법",
       "cited_law": "",
       "article": "제9조",
-      "cited": "제9조",
+      "cited": "저작권법 제9조",
       "source_line": "제9조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "업무상저작물의 저작자",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "evidence": "법령명이 없다. 같은 문단의 「저작권법」일 가능성이 높다 (그 법령으로 조회하면 OK)",
           "source": "인용 추출"
         }
       ],
       "id": "L10",
       "kind": "law",
       "law": "",
-      "cited_law": "",
+      "cited_law": "저작권법",
       "article": "제123조",
       "cited": "제123조",
       "source_line": "제123조",
       "status": "WARN_UNCHECKED",
       "needs_context": true,
       "law_candidates": [
-        ""
+        "저작권법"
       ],
       "class": "WARN",
       "reason": "미검증",
@@ -273,21 +279,21 @@
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "evidence": "법령명이 없다. 같은 문단의 「저작권법」일 가능성이 높다 (그 법령으로 조회하면 OK)",
           "source": "인용 추출"
         }
       ],
       "id": "L11",
       "kind": "law",
       "law": "",
-      "cited_law": "",
+      "cited_law": "저작권법",
       "article": "제125조",
       "cited": "제125조",
       "source_line": "제125조",
       "status": "WARN_UNCHECKED",
       "needs_context": true,
       "law_candidates": [
-        ""
+        "저작권법"
       ],
       "class": "WARN",
       "reason": "미검증",
@@ -318,51 +324,55 @@
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「부정경쟁방지 및 영업비밀보호에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제19조(양벌규정) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
         }
       ],
       "id": "L13",
       "kind": "law",
-      "law": "",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "",
       "article": "제19조",
       "claimed_title": "양벌규정",
-      "cited": "제19조",
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제19조",
       "source_line": "제19조",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "title": "양벌규정",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
         {
-          "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
+          "check": "LAW_INFERRED",
+          "evidence": "법령명이 없어 같은 문장의 「부정경쟁방지 및 영업비밀보호에 관한 법률」로 봤다",
           "source": "인용 추출"
+        },
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조(정의) 실존",
+          "source": "부정경쟁방지 및 영업비밀보호에 관한 법률 (시행 20260528, MST 277201)"
         }
       ],
       "id": "L14",
       "kind": "law",
-      "law": "",
+      "law": "부정경쟁방지 및 영업비밀보호에 관한 법률",
       "cited_law": "",
       "article": "제2조",
-      "cited": "제2조",
-      "source_line": "제2조 제3호",
-      "status": "WARN_UNCHECKED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
-      "class": "WARN",
-      "reason": "미검증",
-      "fix": "수동으로 확인한다"
+      "cited": "부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제3호 다목",
+      "source_line": "제2조 제3호 다목",
+      "title": "정의",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -399,7 +409,7 @@
       "law": "형법",
       "cited_law": "형법",
       "article": "제355조",
-      "cited": "형법 제355조",
+      "cited": "형법 제355조 제2항",
       "source_line": "제355조 제2항",
       "title": "횡령, 배임",
       "status": "OK",
@@ -472,13 +482,8 @@
     }
   ],
   "pending_checks": [
-    "L6",
-    "L7",
-    "L9",
     "L10",
-    "L11",
-    "L13",
-    "L14"
+    "L11"
   ],
   "data_source": "법제처 국가법령정보센터 Open API"
 }

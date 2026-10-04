@@ -1,15 +1,15 @@
 # 시드 평가 결과
 
-실행일 2026-10-04 · 기준일 2026-10-04 · 문서 24개
+실행일 2026-10-05 · 기준일 2026-10-04 · 문서 27개
 
 | 지표 | 결과 | 기준 |
 |---|---|---|
-| 진짜 인용을 FAIL로 판정 (오탐) | 0건 / 63 | 0건 |
+| 진짜 인용을 FAIL로 판정 (오탐) | 0건 / 70 | 0건 |
 | 정당한 인용의 기대 판정 적중률 | 100% | 참고 |
-| 가짜·낡은 인용 검출률 (WARN 또는 FAIL) | 100% (23/23) | 90% 이상 |
-| FAIL이어야 하는 유형의 FAIL 판정률 | 100% (17/17) | 100% |
+| 가짜·낡은 인용 검출률 (WARN 또는 FAIL) | 100% (26/26) | 90% 이상 |
+| FAIL이어야 하는 유형의 FAIL 판정률 | 100% (19/19) | 100% |
 | 미검출 인용 | 0건 | 0건 |
-| 문서 판정 일치 | 23/24 | 전부 |
+| 문서 판정 일치 | 27/27 | 전부 |
 
 ## 인용별
 
@@ -38,7 +38,7 @@
 | S05 |  | 상법 제382조의3 | real | OK | OK | O |
 | S05 |  | 상법 제399조 | real | OK | OK | O |
 | S05 | T10 | 제401조 | real | OK | OK | O |
-| S05 |  | 형법 제356조 | real | OK | OK_ALIAS | O |
+| S05 |  | 형법 제356조 | real | OK | OK | O |
 | S05 | T3 | 2029도4567 | fake | FAIL | FAIL_IMPOSSIBLE_CASE | O |
 | S06 | T13 | 구 증권거래법 제188조의2 | legit_old | WARN | WARN_REPEALED_HISTORICAL | O |
 | S06 |  | 자본시장과 금융투자업에 관한 법률 제174조 | real | WARN | WARN_PENDING_CHANGE | O |
@@ -56,7 +56,7 @@
 | S10 | T6 | 2012다89399 | fake | NOT_OK | FAIL_OVERRULED | O |
 | S10 |  | 근로기준법 제56조 | real | OK | OK | O |
 | S11 |  | 국세기본법 제14조 | real | OK | OK | O |
-| S11 |  | 법인세법 제52조 | real | OK | OK_ALIAS | O |
+| S11 |  | 법인세법 제52조 | real | OK | OK | O |
 | S11 |  | 부가가치세법 제3조 | real | OK | OK | O |
 | S11 | T2 | 소득세법 제20조(실질과세) | fake | FAIL | FAIL_MISMATCH | O |
 | S12 |  | 주식회사 등의 외부감사에 관한 법률 제8조 | real | OK | OK | O |
@@ -101,3 +101,13 @@
 | S24 | T15 | 근로기준법 제109조 | real | WARN | WARN_PENDING_CHANGE | O |
 | S24 |  | 근로기준법 제23조 | real | OK | OK | O |
 | S24 | T15 | 근로기준법 제44조의4 | real | WARN | WARN_NOT_YET_EFFECTIVE | O |
+| S25 | T16 | 근로기준법 제23조 | real | OK | OK | O |
+| S25 | T16 | 민법 제543조 | real | OK | OK | O |
+| S26 | T16 | 약관의 규제에 관한 법률 제6조 | real | OK | OK | O |
+| S26 | T16 | 약관의 규제에 관한 법률 제8조 | real | OK | OK | O |
+| S26 | T2 | 약관의 규제에 관한 법률 제7조 | fake | FAIL | FAIL_MISMATCH | O |
+| S26 | T2 | 제9조 | fake | NOT_OK | WARN_TITLE_DIFF | O |
+| S26 | T16 | 상법 제382조의3 | real | OK | OK | O |
+| S26 | T16 | 제393조 | real | WARN | WARN_UNCHECKED | O |
+| S27 | T17 | 부정경쟁방지 및 영업비밀보호에 관한 법률 제2조 제3호 하목 | fake | FAIL | FAIL_NOT_FOUND | O |
+| S27 | T16 | 부정경쟁방지 및 영업비밀보호에 관한 법률 제18조 | real | OK | OK | O |

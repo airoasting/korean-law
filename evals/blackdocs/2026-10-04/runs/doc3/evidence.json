@@ -1,12 +1,12 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "engine": "verify_document",
   "verdict": "FAIL",
   "verdict_ko": "반려",
   "reasons": [
     "FAIL 2건. 점수와 무관하게 반려한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "as_of": "20261004",
   "normalize_changes": [],
   "items": [
@@ -50,13 +50,13 @@
       "law": "근로기준법",
       "cited_law": "이유로 한 이 사건 해고가 근로기준법",
       "article": "제23조",
-      "cited": "이유로 한 이 사건 해고가 근로기준법 제23조",
+      "cited": "근로기준법 제23조 제1항",
       "source_line": "제23조 제1항",
       "title": "해고 등의 제한",
-      "status": "OK_ALIAS",
+      "status": "OK",
       "class": "PASS",
-      "reason": "약칭, 정식 법령에서 확인",
-      "fix": "처음 나올 때 정식 법령명을 병기한다"
+      "reason": "실존 확인",
+      "fix": ""
     },
     {
       "evidence": [
@@ -71,7 +71,7 @@
       "law": "근로기준법",
       "cited_law": "근로기준법",
       "article": "제23조",
-      "cited": "근로기준법 제23조",
+      "cited": "근로기준법 제23조 제1항",
       "source_line": "제23조 제1항",
       "title": "해고 등의 제한",
       "status": "OK",

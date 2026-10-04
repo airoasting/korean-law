@@ -1,4 +1,4 @@
-// 문서 파일 하나를 verify_document와 같은 엔진으로 검증해 판정 JSON(korean-law/evidence@1)을 표준출력으로 낸다.
+// 문서 파일 하나를 verify_document와 같은 엔진으로 검증해 판정 JSON(korean-law/evidence@2)을 표준출력으로 낸다.
 // 사용: node mcp/scripts/verify-file.mjs <문서.md> [YYYY-MM-DD] > raw/document-1.json   (인증키는 mcp/.env 의 KOREAN_LAW_OC)
 import { readFileSync } from "node:fs"
 import { dirname, join, resolve } from "node:path"
@@ -15,6 +15,13 @@ if (!file) {
 }
 loadEnv()
 const api = new LawApi({ apiKey: process.env.KOREAN_LAW_OC || "" })
-const { evidence } = await api.withBudget(Number(process.env.KOREAN_LAW_MAX_REQUESTS) || 400,
-  () => verifyDocument(api, { text: readFileSync(file, "utf8"), asOf }))
-process.stdout.write(JSON.stringify(evidence, null, 2) + "\n")
+try {
+  const { evidence } = await api.withBudget(Number(process.env.KOREAN_LAW_MAX_REQUESTS) || 400,
+    () => verifyDocument(api, { text: readFileSync(file, "utf8"), asOf }))
+  process.stdout.write(JSON.stringify(evidence, null, 2) + "\n")
+  // 검증을 끝내지 못했으면 종료 코드로도 알린다 (판정 JSON은 그대로 낸다)
+  if (evidence.verdict === "INCOMPLETE") process.exitCode = 3
+} catch (error) {
+  console.error(api.mask(error instanceof Error ? error.message : String(error)))
+  process.exit(2)
+}

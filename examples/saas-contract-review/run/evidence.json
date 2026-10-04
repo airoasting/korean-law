@@ -1,11 +1,11 @@
 {
-  "schema": "korean-law/evidence@1",
+  "schema": "korean-law/evidence@2",
   "verdict": "FAIL",
   "verdict_ko": "반려",
   "reasons": [
     "FAIL 2건. 점수와 무관하게 반려한다"
   ],
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-05",
   "base_date": null,
   "input": "examples/saas-contract-review/input.md",
   "normalize_changes": [
@@ -36,6 +36,7 @@
       "PASS": 4,
       "WARN": 1,
       "FAIL": 1,
+      "ERROR": 0,
       "SKIP": 1
     },
     "case": {
@@ -43,6 +44,7 @@
       "PASS": 0,
       "WARN": 1,
       "FAIL": 1,
+      "ERROR": 0,
       "SKIP": 0
     }
   },
@@ -51,13 +53,8 @@
       "evidence": [
         {
           "check": "SCOPE_CHECK",
-          "evidence": "법령명을 정하지 못한 조문",
-          "source": "인용 추출"
-        },
-        {
-          "check": "SCOPE_CHECK",
-          "evidence": "본 약관 제11조(책임의 제한)는 회사의 고의·중과실로 인한 손해까지 배상 상한을 직전 3개월 이용료로 묶고 있다.",
-          "source": "input.md"
+          "evidence": "## 2. 책임제한 조항 (약관 제11조)",
+          "source": "문서 자체의 조항 (인용 추출)"
         }
       ],
       "id": "L1",
@@ -68,17 +65,10 @@
       "cited": "제11조",
       "source_line": "제11조",
       "status": "EXCLUDED",
-      "needs_context": true,
-      "law_candidates": [
-        ""
-      ],
       "class": "SKIP",
       "reason": "법령 인용 아님 (문서 자체의 조항)",
       "fix": "",
-      "checks": [
-        "SCOPE_CHECK"
-      ],
-      "note": "검토 대상 약관 자체의 조항"
+      "checks": []
     },
     {
       "evidence": [

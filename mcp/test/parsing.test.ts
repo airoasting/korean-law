@@ -44,13 +44,33 @@ describe("조문 인용 추출", () => {
     expect(cite("판매 목표를 강제하는 행위는 공정거래법 제45조에 해당한다")[0].lawName).toBe("공정거래법")
     expect(cite("당시 시행되던 구 증권거래법 제188조의2가 적용된다")[0].lawName).toBe("당시 시행되던 구 증권거래법")
     expect(cite("판매하는 경우 전자상거래 등에서의 소비자보호에 관한 법률 제17조")[0].lawName).toBe("전자상거래 등에서의 소비자보호에 관한 법률")
-    expect(cite("법인세법 제28조 제1항 제4호와 시행령 제53조")[1].lawName).toBe("시행령")
     expect(cite("소득세법 시행령 제5조")[0].lawName).toBe("소득세법 시행령")
   })
   it("법령명이 없거나 문서 자체 조항이면 lawName 없이 남긴다", () => {
     const c = cite("본 약관 제11조(책임의 제한)는 수정이 필요하다")
     expect(c).toHaveLength(1)
     expect(c[0].lawName).toBeUndefined()
+  })
+  it("문서 자체의 조항은 selfClause로 표시한다", () => {
+    const c = cite("본 계약서 제12조(면책)는 수정이 필요하다. 계약서 제15조의 지체상금은 민법 제398조로 감액된다. 회사 취업규칙 제5조도 본다.")
+    expect(c.map((x) => [x.display, x.selfClause ?? false, x.lawName])).toEqual([
+      ["제12조", true, undefined], ["제15조", true, undefined], ["제398조", false, "민법"], ["제5조", true, undefined]])
+    expect(cite("본 약관 제11조(책임의 제한)는 고친다.\n\n제11조는 상한에서 고의를 뺀다.")).toHaveLength(1)
+  })
+  it("앞말이 조사·연결어미로 이어질 때만 앞 법령으로 추정한다", () => {
+    const c = cite("국세기본법 제45조(수정신고)로 정리하여 제48조(가산세 감면 등)의 감면을 받는다. 손해액은 제14조로 본다.\n\n상법 제393조와 내부 지침 제3조를 함께 본다.")
+    expect(c.map((x) => [x.display, x.lawName, x.inferred])).toEqual([
+      ["제45조", "국세기본법", undefined], ["제48조", "국세기본법", "sentence"], ["제14조", "국세기본법", "paragraph"],
+      ["제393조", "상법", undefined], ["제3조", undefined, undefined]])
+    expect(c[4].selfClause).toBe(true)
+  })
+  it("시행령만 적으면 같은 문장의 부모 법령에 붙인다", () => {
+    const c = cite("법인세법 제28조 제1항 제4호와 시행령 제53조에 따라 손금에 넣지 않는다.")
+    expect([c[1].lawName, c[1].inferred]).toEqual(["법인세법 시행령", "sentence"])
+  })
+  it("목을 읽되 '각 목'은 목 인용이 아니다", () => {
+    const c = cite("부정경쟁방지법 제2조 제3호 다목에 해당한다. 같은 법 제2조 제1호 각 목의 행위다.")
+    expect(c.map((x) => [x.ho, x.mok])).toEqual([[3, "다"], [1, undefined]])
   })
   it("'(이하 …)'나 날짜는 제목이 아니다", () => {
     expect(cite("민법 제2조 (2020. 1. 1. 시행)")[0].claimTitle).toBeUndefined()
