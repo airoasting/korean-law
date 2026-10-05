@@ -51,7 +51,7 @@ output/{YYYYMMDD}_NN/
   ],
   "pending_checks": ["끝내지 않은 확인 (verify_document는 id 목록, build는 {id, check, cited})"],
   "data_source": "법제처 국가법령정보센터 Open API",
-  "expert_review": {"scene": "GOLD의 독자 장면", "reviews": [{"role": "RED | SILVER | GOLD", "score": 8.5, "comment": "평가 한 줄", "fix": "고칠 점 한 줄"}], "average": 8.5, "note": "참고용 평가. 판정에 영향을 주지 않는다 (build, 선택)"}
+  "expert_review": {"reviews": [{"role": "RED | SILVER | GOLD", "score": 8.5, "comment": "평가 한 줄", "fix": "고칠 점 한 줄"}], "average": 8.5, "note": "참고용 평가. 판정에 영향을 주지 않는다 (build, 선택)"}
 }
 ```
 

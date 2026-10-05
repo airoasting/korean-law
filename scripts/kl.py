@@ -185,7 +185,7 @@ def load_expert_review(path: Path, verdict: str) -> dict | None:
             sys.exit(f"판정이 FAIL이면 {r['role']}는 7점을 넘길 수 없다 (틀린 근거 위의 논리·법리는 성립하지 않는다)")
     order = list(ROLES)
     reviews = sorted(reviews, key=lambda r: order.index(r["role"]))
-    return {"scene": data.get("scene", ""), "reviews": reviews,
+    return {"reviews": reviews,
             "average": round(sum(r["score"] for r in reviews) / len(reviews), 2), "note": "참고용 평가. 판정에 영향을 주지 않는다"}
 
 
@@ -339,8 +339,6 @@ def render_md(ev: dict) -> str:
     rv = ev.get("expert_review")
     if rv:
         out += ["## 전문가 평가 (10점 만점, 참고용)", ""]
-        if rv.get("scene"):
-            out += [f"독자 장면: {rv['scene']}", ""]
         out += ["| 역할 | 관점 | 점수 | 평가 | 고칠 점 |", "|---|---|---|---|---|"]
         out += [f"| {r['role']} | {ROLES[r['role']]} | {r['score']:.1f} | {_cell(r['comment'])} | {_cell(r['fix'])} |" for r in rv["reviews"]]
         out += ["", f"평균 {rv['average']:.1f}점. 판정(통과·반려)은 위 검증 결과로만 정하고, 이 점수는 바꾸지 않는다.", ""]
