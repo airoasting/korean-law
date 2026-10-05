@@ -4,8 +4,6 @@ AI가 쓴 한국 법률 문서의 조문·판례 인용을 **법제처 DB로 검
 
 계약서 검토, 법률 의견서, 준비서면, 세무·내부통제 문서를 넣으면 인용 하나하나를 실존, 현행, 제목, 선고일, 판례 생사까지 대조한 **법률 근거 검증표**가 나온다. 의견을 내지 않고 사실만 판정한다.
 
-> 영감: 법제처 Open API를 MCP로 묶은 [chrisryugj/korean-law-mcp](https://github.com/chrisryugj/korean-law-mcp)에서 아이디어를 얻었다.
-
 ## 왜 만들었나
 
 요즘은 계약서 검토 메모나 법률 의견서 초안을 AI에게 맡기는 일이 많다. 문장은 그럴듯하다. 문제는 그 안에 적힌 "○○법 제△조", "대법원 ○○다○○ 판결"이 정말 맞는지를 법을 모르는 사람은 확인하기 어렵다는 점이다.
@@ -304,3 +302,4 @@ README.md · LICENSE
 
 - 데이터: 법제처 국가법령정보센터 Open API. 법적 효력이 필요한 판단은 국가법령정보센터 원문을 확인한다.
 - 라이선스: MIT ([LICENSE](LICENSE)).
+- 영감: 법제처 Open API를 MCP로 묶은 [chrisryugj/korean-law-mcp](https://github.com/chrisryugj/korean-law-mcp)에서 아이디어를 얻었다.
