@@ -281,7 +281,7 @@ Claude Code에서는 `/korean-law`로 바로 부를 수도 있다. 행위·계�
 |---|---|---|
 | Step 1 | 스킬. 결정적 판정, 검증표, 시드 평가 | 완료 (2026-10-04) |
 | Step 2 | 검증 엔진 MCP 서버 (`mcp/`). 문서 한 번 호출로 판정 JSON, 기준일 본문 대조, 시행 예정 개정 경고, 판례 생사, 목 단위, 생략 법령명 추정 | 완료 (2026-10-05) |
-| Step 3 | Roasting 통합 (Roasting v0.5.0 Phase 4.5, 게이트 비용 라운드당 약 4.6초: [evals/roasting](evals/roasting/2026-10-05/c61/REPORT.md)). 법무 케이스에서 BLACK 초안을 비평 전에 거르는 게이트, SILVER에게 검증표를 1차 출처로 제공 | 진행 중 (2026-10-05 c61 측정) |
+| Step 3 | Roasting 통합. 법무 케이스에서 BLACK 초안을 비평 전에 거르는 게이트, SILVER에게 검증표를 1차 출처로 제공 | 예정 |
 
 설계와 판단 근거는 [docs/DESIGN.md](docs/DESIGN.md)에 있다.
 
@@ -295,7 +295,7 @@ scripts/kl.py        실행 폴더, 판정 JSON 모으기, 최종 판정과 검�
 references/          판정 규칙, 출력 스키마와 Roasting 연동 계약
 mcp/                 검증 엔진 MCP 서버 (TypeScript)
 examples/            실행 예시 (입력, 검증표, 심어 둔 오류 정답표)
-evals/               시드 28개, 채점 기록, AI 작성 문서 실측, Roasting 연동 측정
+evals/               시드 28개, 채점 기록, AI 작성 문서 실측
 docs/DESIGN.md       설계서와 단계별 결과
 README.md · LICENSE
 ```
