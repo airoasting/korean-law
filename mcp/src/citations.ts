@@ -42,6 +42,7 @@ const LEAD_WORDS = new Set(["구", "현행", "개정", "및", "또는", "또한"
 const SUBORDINATE_RE = /\s?(시행령|시행규칙)$/u
 // 조문 바로 앞에 오면 문서 자체의 조항이다
 const SELF_DOC_TAIL = /(?:^|[\s(「])(?:(?:본|이|동|위|해당|당해)\s?)?(?:계약서?|약관|정관|취업규칙|단체협약|협약서?|합의서|각서|규약|사규|내규|지침|매뉴얼|본\s?규정|이\s?규정|동\s?규정)\s*$/u
+const SELF_DOC_LAST = /(?:^|\s)(?:취업규칙|사내규정|내부규정|운영규정|회사규정|인사규정|정관|사규|내규)$/u
 const SELF_DOC_NAME = /^(?:(?:본|이|동|당사|회사|사내)\s?)?(?:취업규칙|사내규정|내부규정|운영규정|회사규정|인사규정|규정|정관)$/u
 // 앞말이 이렇게 끝나야 앞 조문에 이어지는 조문으로 본다 (조사, 연결어미, 여는 괄호, 쉼표)
 const CONTINUES = /(?:^|[(,·]|[은는이가을를와과로에의도고며서면나]|및|또는|으로|에서|하여|따라|위해)\s*$/u
@@ -111,7 +112,8 @@ export function extractArticleCitations(text: string, max = 60): ArticleCitation
       const sub = ANAPHORA_RE.exec(lawName)?.[1]
       lawName = base ? (sub ? `${base} ${sub}` : base) : undefined
     }
-    if (lawName && SELF_DOC_NAME.test(lawName)) {
+    // 법령명 끝 낱말이 사내 규범이면 앞에 문장 조각이 붙어 있어도 문서 자체의 조항이다 ("결근 일수가 취업규칙 제45조")
+    if (lawName && (SELF_DOC_NAME.test(lawName) || SELF_DOC_NAME.test(lawName.split(" ").slice(-2).join(" ")) || SELF_DOC_LAST.test(lawName))) {
       lawName = undefined
       selfClause = true
     } else if (!lawName && SELF_DOC_TAIL.test(lookback.replace(/[「」『』"'“”‘’]/gu, ""))) {

@@ -1,0 +1,56 @@
+{
+  "schema": "korean-law/evidence@2",
+  "engine": "verify_document",
+  "verdict": "PASS",
+  "verdict_ko": "통과",
+  "reasons": [],
+  "checked_at": "2026-10-05",
+  "as_of": "20261004",
+  "normalize_changes": [],
+  "items": [
+    {
+      "evidence": [
+        {
+          "check": "SCOPE_CHECK",
+          "evidence": "피고는 질병으로 소명된 날을 뺀 나머지 결근일의 일수와 연속 일수가 취업규칙 제45조의 기준을 넘는다는 점을 다시 밝힌다.",
+          "source": "문서 자체의 조항 (인용 추출)"
+        }
+      ],
+      "id": "L1",
+      "kind": "law",
+      "law": "",
+      "cited_law": "",
+      "article": "제45조",
+      "cited": "제45조",
+      "source_line": "제45조",
+      "status": "EXCLUDED",
+      "class": "SKIP",
+      "reason": "법령 인용 아님 (문서 자체의 조항)",
+      "fix": ""
+    },
+    {
+      "evidence": [
+        {
+          "check": "ARTICLE_CHECK",
+          "evidence": "근로기준법 제23조(해고 등의 제한) 실존",
+          "source": "근로기준법 (시행 20261002, MST 290781)"
+        }
+      ],
+      "id": "L2",
+      "kind": "law",
+      "law": "근로기준법",
+      "cited_law": "근로기준법",
+      "article": "제23조",
+      "claimed_title": "해고 등의 제한",
+      "cited": "근로기준법 제23조",
+      "source_line": "제23조",
+      "title": "해고 등의 제한",
+      "status": "OK",
+      "class": "PASS",
+      "reason": "실존 확인",
+      "fix": ""
+    }
+  ],
+  "pending_checks": [],
+  "data_source": "법제처 국가법령정보센터 Open API"
+}

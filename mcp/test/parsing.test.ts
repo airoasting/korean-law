@@ -56,6 +56,8 @@ describe("조문 인용 추출", () => {
     expect(c.map((x) => [x.display, x.selfClause ?? false, x.lawName])).toEqual([
       ["제12조", true, undefined], ["제15조", true, undefined], ["제398조", false, "민법"], ["제5조", true, undefined]])
     expect(cite("본 약관 제11조(책임의 제한)는 고친다.\n\n제11조는 상한에서 고의를 뺀다.")).toHaveLength(1)
+    const lead = cite("질병으로 소명된 날을 뺀 나머지 결근일의 일수와 연속 일수가 취업규칙 제45조의 기준을 넘는다.")
+    expect([lead[0].selfClause, lead[0].lawName]).toEqual([true, undefined])
   })
   it("앞말이 조사·연결어미로 이어질 때만 앞 법령으로 추정한다", () => {
     const c = cite("국세기본법 제45조(수정신고)로 정리하여 제48조(가산세 감면 등)의 감면을 받는다. 손해액은 제14조로 본다.\n\n상법 제393조와 내부 지침 제3조를 함께 본다.")
