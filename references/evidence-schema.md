@@ -1,4 +1,4 @@
-# 출력 형식과 Roasting 연동 계약
+# 출력 형식
 
 ## 실행 폴더
 
@@ -9,6 +9,7 @@ output/{YYYYMMDD}_NN/
 ├── raw/document-N.json   verify_document 응답 JSON (수정 금지). 1은 문서 전체, 2부터는 재검증 묶음
 ├── items.json            모은 항목과 문맥 확인 목록
 ├── overrides.json        문맥 확인 결과 (LLM이 기록)
+├── expert-review.json    전문가 3인 평가 (LLM이 기록, 참고용)
 ├── evidence.json         최종 판정 (기계용, 아래 스키마)
 └── evidence.md           법률 근거 검증표 (사람용)
 ```
@@ -49,21 +50,20 @@ output/{YYYYMMDD}_NN/
     }
   ],
   "pending_checks": ["끝내지 않은 확인 (verify_document는 id 목록, build는 {id, check, cited})"],
-  "data_source": "법제처 국가법령정보센터 Open API"
+  "data_source": "법제처 국가법령정보센터 Open API",
+  "expert_review": {"scene": "GOLD의 독자 장면", "reviews": [{"role": "RED | SILVER | GOLD", "score": 8.5, "comment": "평가 한 줄", "fix": "고칠 점 한 줄"}], "average": 8.5, "note": "참고용 평가. 판정에 영향을 주지 않는다 (build, 선택)"}
 }
 ```
 
-`@2`(2026-10-05)에서 바뀐 것: 판정 `INCOMPLETE`, 등급 `ERROR`와 상태 `ERROR_LOOKUP`, 엔진이 내는 `EXCLUDED`, 근거 `LAW_INFERRED`, 항목의 `optional_checks`. 스키마를 바꾸면 버전을 올리고, 이 문서와 Roasting 쪽 소비 코드를 함께 고친다.
+`@2`(2026-10-05)에서 바뀐 것: 판정 `INCOMPLETE`, 등급 `ERROR`와 상태 `ERROR_LOOKUP`, 엔진이 내는 `EXCLUDED`, 근거 `LAW_INFERRED`, 항목의 `optional_checks`, 선택 필드 `expert_review`(판정과 무관한 참고 평가). 스키마를 바꾸면 버전을 올리고, 이 문서와 결과를 읽는 쪽 코드를 함께 고친다.
 
-## Roasting 연동 계약 (Step 3에서 구현)
+## 다른 작업 흐름에 붙일 때
 
-| 시점 | Roasting이 할 일 | 이 스킬이 주는 것 |
-|---|---|---|
-| BLACK 초안 직후 (Phase 4.5) | 초안 파일을 이 스킬에 넣는다. 케이스에 기준일이 있으면 `--date`와 `asOf`로 넘긴다 | `evidence.json`, `evidence.md` |
-| `verdict == INCOMPLETE` 또는 도구 오류 | 비평 단계로 가지 않는다. 한 번 다시 돌리고, 그래도 같으면 멈추고 사용자에게 보고한다 | 조회 실패 목록 |
-| `verdict == FAIL` | 비평 단계로 가지 않는다. `evidence.md`의 반려 사유를 BLACK 재작성 프롬프트에 붙인다. 라운드 상한(4)에 포함한다 | 반려 사유와 고칠 곳 |
-| 게이트가 2번 연속 FAIL | 멈추고 사용자에게 보고한다 | |
-| `PASS` 또는 `PASS_WITH_WARNINGS` | `evidence.md`를 SILVER 프롬프트에 1차 출처로 붙인다. SILVER 평가축에 "경고를 본문에 반영했는가"를 더한다 | 경고 목록 |
-| 최종 산출물 | `evidence.md`의 표를 문서 끝에 붙인다 | 검증표 |
+| 판정 | 할 일 |
+|---|---|
+| `FAIL` | 문서를 작성자(사람 또는 AI)에게 돌려보낸다. `evidence.md`의 반려 사유 표를 그대로 넘긴다. 고친 뒤 처음부터 다시 검증한다 |
+| `INCOMPLETE` 또는 도구 오류 | 다음 단계로 넘기지 않는다. 한 번 다시 돌리고, 그래도 같으면 멈추고 사람에게 알린다 |
+| `PASS_WITH_WARNINGS` | 경고를 본문에 반영하게 한 뒤 다음 단계로 넘긴다 |
+| `PASS` | 다음 단계로 넘긴다. 검증표를 문서 끝에 붙여 근거로 남길 수 있다 |
 
-비평가 에이전트(`tools: ["Read"]`)에게 MCP 권한을 주지 않는다. 게이트는 오케스트레이터가 실행하고, 비평가는 결과 파일만 읽는다.
+`expert_review`의 점수는 참고 의견이다. 작업 흐름의 통과 조건에 쓰지 않는다.

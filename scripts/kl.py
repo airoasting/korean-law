@@ -158,6 +158,37 @@ def load_overrides(path: Path) -> list[dict]:
     return data
 
 
+ROLES = {
+    "RED": "이성 비평가 (논리·근거·결론)",
+    "SILVER": "분야 전문가 (근거의 논지 적합성·실무 기준)",
+    "GOLD": "실제 독자 (이 문서로 결정할 수 있는가)",
+}
+
+
+def load_expert_review(path: Path, verdict: str) -> dict | None:
+    """전문가 3인 평가(참고용). 판정은 바꾸지 않는다. 형식이 틀리면 멈춘다."""
+    if not path.exists():
+        return None
+    if verdict in ("INCOMPLETE", "NO_CITATIONS"):
+        sys.exit(f"판정이 {verdict}이면 전문가 평가를 붙이지 않는다. expert-review.json을 지우거나 검증부터 끝낸다")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    reviews = data.get("reviews") or []
+    if sorted(r.get("role") for r in reviews) != sorted(ROLES):
+        sys.exit("expert-review.json에는 RED, SILVER, GOLD 세 역할이 하나씩 있어야 한다")
+    for r in reviews:
+        sc = r.get("score")
+        if not isinstance(sc, (int, float)) or not 0 <= sc <= 10 or (sc * 2) % 1:
+            sys.exit(f"{r['role']} 점수는 0~10 사이 0.5 단위여야 한다: {sc}")
+        if not str(r.get("comment", "")).strip() or not str(r.get("fix", "")).strip():
+            sys.exit(f"{r['role']}의 평가(comment)와 고칠 점(fix)을 한 줄씩 적는다")
+        if verdict == "FAIL" and r["role"] in ("RED", "SILVER") and sc > 7:
+            sys.exit(f"판정이 FAIL이면 {r['role']}는 7점을 넘길 수 없다 (틀린 근거 위의 논리·법리는 성립하지 않는다)")
+    order = list(ROLES)
+    reviews = sorted(reviews, key=lambda r: order.index(r["role"]))
+    return {"scene": data.get("scene", ""), "reviews": reviews,
+            "average": round(sum(r["score"] for r in reviews) / len(reviews), 2), "note": "참고용 평가. 판정에 영향을 주지 않는다"}
+
+
 def compute_verdict(items: list[dict], pending: list[dict]) -> tuple[str, list[str]]:
     items = [it for it in items if STATUS[it["status"]][0] != "SKIP"]
     if not items:
@@ -248,6 +279,9 @@ def cmd_build(a: argparse.Namespace) -> None:
         "pending_checks": pending,
         "data_source": "법제처 국가법령정보센터 Open API (korean-law 엔진)",
     }
+    review = load_expert_review(run / "expert-review.json", verdict)
+    if review:
+        ev["expert_review"] = review
     (run / "evidence.json").write_text(json.dumps(ev, ensure_ascii=False, indent=2), encoding="utf-8")
     (run / "evidence.md").write_text(render_md(ev), encoding="utf-8")
     print(f"판정: {verdict} ({VERDICT_KO[verdict]})")
@@ -302,6 +336,14 @@ def render_md(ev: dict) -> str:
         out += ["## 표기 정규화", "", "검증 전에 다음 표기를 바꿨다.", ""]
         out += [f"- `{ch['before']}` → `{ch['after']}`" for ch in ev["normalize_changes"]]
         out.append("")
+    rv = ev.get("expert_review")
+    if rv:
+        out += ["## 전문가 평가 (10점 만점, 참고용)", ""]
+        if rv.get("scene"):
+            out += [f"독자 장면: {rv['scene']}", ""]
+        out += ["| 역할 | 관점 | 점수 | 평가 | 고칠 점 |", "|---|---|---|---|---|"]
+        out += [f"| {r['role']} | {ROLES[r['role']]} | {r['score']:.1f} | {_cell(r['comment'])} | {_cell(r['fix'])} |" for r in rv["reviews"]]
+        out += ["", f"평균 {rv['average']:.1f}점. 판정(통과·반려)은 위 검증 결과로만 정하고, 이 점수는 바꾸지 않는다.", ""]
     out += [
         "---",
         "",
