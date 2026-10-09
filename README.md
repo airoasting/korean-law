@@ -113,12 +113,32 @@ MCP 서버의 `verify_document`가 문서 한 편을 한 번에 검증한다. �
 
 ## 설치
 
-준비물은 두 가지다. 하나는 **스킬**(이 저장소 자체로, 루트에 `SKILL.md`가 있다), 다른 하나는 **MCP 서버**(`mcp/`)다. 서버는 내 컴퓨터에서 돌고, 인증키는 `mcp/.env`에만 둔다.
+준비물은 두 가지다. 하나는 **스킬**(이 저장소 자체로, 루트에 `SKILL.md`가 있다), 다른 하나는 **MCP 서버**(`mcp/`)다. 서버는 내 컴퓨터에서 돈다. Claude Code에서는 플러그인 하나로 둘 다 설치되고, 인증키는 플러그인 설정(macOS 키체인)에 들어간다. 저장소를 직접 받아 설치하면 인증키는 `mcp/.env`에 둔다.
 
 - Node.js 20.19 이상, Python 3.9 이상
 - 법제처 Open API 인증키(OC). [법제처 국가법령정보 공동활용](https://open.law.go.kr/)에서 무료로 발급받는다. 아래 명령의 `인증키` 자리에 발급받은 값을 넣는다.
 
-### Claude Code
+### Claude Code 플러그인 (권장)
+
+스킬과 MCP 서버가 함께 설치된다. 서버는 미리 묶어 둔 파일(`mcp/dist/server.mjs`)이라 빌드가 필요 없고 Node.js만 있으면 된다.
+
+**1. 마켓플레이스 추가와 설치.** Claude Code 안에서 아래 두 줄을 차례로 입력한다.
+
+```
+/plugin marketplace add airoasting/skills
+```
+
+```
+/plugin install korean-law@airoasting
+```
+
+**2. 인증키 입력.** 설치하면 설정 창이 열린다. `법제처 Open API 인증키(OC)` 칸에 발급받은 값을 넣는다. 나중에 넣거나 바꾸려면 `/plugin configure korean-law@airoasting`을 연다. 터미널에서 `claude plugin install`로 설치했다면 설정 창이 뜨지 않으므로 이 명령으로 넣는다.
+
+**3. 확인.** Claude Code를 다시 시작하고 `/mcp`에서 `plugin:korean-law:korean-law`가 연결됐는지 본다. 연결됐으면 `/korean-law`로 스킬을 부른다.
+
+이미 아래 방법으로 `korean-law` 서버를 등록해 두었다면 같은 도구가 두 벌 보인다. 플러그인 서버가 연결된 것을 확인한 뒤 `claude mcp remove korean-law`로 예전 등록을 지운다.
+
+### Claude Code (저장소를 직접 받아 설치)
 
 **1. 스킬 받기**
 
@@ -304,6 +324,8 @@ SKILL.md             스킬 실행 절차 (Claude Code·Codex가 읽는 진입�
 scripts/kl.py        실행 폴더, 판정 JSON 모으기, 최종 판정과 검증표, 채점
 references/          판정 규칙, 출력 형식, 전문가 평가 기준
 mcp/                 검증 엔진 MCP 서버 (TypeScript)
+mcp/dist/server.mjs  플러그인이 띄우는 묶음 파일. mcp/src를 고치면 `npm run bundle`로 다시 만든다
+.claude-plugin/      플러그인 매니페스트 (MCP 서버 등록, 인증키 설정 항목)
 examples/            실행 예시 (입력, 검증표, 심어 둔 오류 정답표)
 evals/               시험 문서 28편, 채점 기록, AI 작성 문서 실측
 docs/DESIGN.md       설계서와 단계별 결과

@@ -14,14 +14,20 @@ npm test
 
 테스트는 법제처를 부르지 않는다. 실제 API 회귀는 루트의 `evals/`에서 돌린다.
 
-## 설정 (`.env`)
+플러그인은 `build/`가 아니라 의존성까지 한 파일로 묶은 `dist/server.mjs`를 띄운다. `src/`를 고쳤으면 커밋 전에 다시 묶는다.
+
+```bash
+npm run bundle
+```
+
+## 설정 (`.env` 또는 플러그인 설정)
 
 | 이름 | 뜻 | 기본 |
 |---|---|---|
 | `KOREAN_LAW_OC` | 법제처 Open API 인증키 | 없음 (필수) |
 | `KOREAN_LAW_MAX_REQUESTS` | 도구 호출 한 번이 쓸 수 있는 법제처 요청 수 | 400 |
 
-`.env`는 git에 올라가지 않는다. 응답과 오류 메시지에서 인증키는 가려진다.
+플러그인으로 설치하면 두 값은 플러그인 설정(`/plugin configure korean-law@airoasting`)에서 들어온다. 플러그인 설정이 비어 있으면 `.env`를 읽는다. `.env`는 git에 올라가지 않는다. 응답과 오류 메시지에서 인증키는 가려진다.
 
 ## 구조
 

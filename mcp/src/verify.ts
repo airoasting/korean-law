@@ -198,7 +198,7 @@ async function pool<T, R>(items: T[], limit: number, fn: (item: T, i: number) =>
 
 export async function verifyDocument(api: LawApi, opt: VerifyOptions) {
   // 인증키 없이 돌리면 모든 조회가 실패한다. 그 결과를 판정으로 내놓지 않고 바로 멈춘다
-  if (!api.hasKey) throw new DrfError("법제처 인증키(KOREAN_LAW_OC)가 없어 검증할 수 없다. mcp/.env에 KOREAN_LAW_OC=인증키를 넣는다")
+  if (!api.hasKey) throw new DrfError("법제처 인증키(KOREAN_LAW_OC)가 없어 검증할 수 없다. 플러그인으로 설치했다면 /plugin configure korean-law@airoasting 에서 인증키를 넣고, 저장소를 받아 설치했다면 mcp/.env에 KOREAN_LAW_OC=인증키를 넣는다")
   const asOf = opt.asOf?.replace(/-/gu, "")
   const { text: doc, changes } = normalizeCitationText(opt.text)
   const articles = extractArticleCitations(doc, opt.maxCitations ?? 40)

@@ -56,7 +56,7 @@ export class LawApi {
   }
 
   async json(endpoint: Endpoint, params: Record<string, string | undefined>): Promise<any> {
-    if (!this.opt.apiKey) throw new DrfError("법제처 인증키(KOREAN_LAW_OC)가 없다. mcp/.env에 KOREAN_LAW_OC=인증키를 넣는다")
+    if (!this.opt.apiKey) throw new DrfError("법제처 인증키(KOREAN_LAW_OC)가 없다. 플러그인으로 설치했다면 /plugin configure korean-law@airoasting 에서 인증키를 넣고, 저장소를 받아 설치했다면 mcp/.env에 KOREAN_LAW_OC=인증키를 넣는다")
     const query = Object.entries(params).filter(([, v]) => v !== undefined && v !== "").sort(([a], [b]) => a.localeCompare(b))
     const key = `${endpoint}?${query.map(([k, v]) => `${k}=${v}`).join("&")}`
     const hit = this.cache.get(key)
