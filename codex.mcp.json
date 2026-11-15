@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "korean-law": {
+      "command": "node",
+      "args": [
+        "mcp/dist/server.mjs"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "KOREAN_LAW_OC",
+        "KOREAN_LAW_MAX_REQUESTS"
+      ]
+    }
+  }
+}
