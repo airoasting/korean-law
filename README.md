@@ -170,6 +170,8 @@ claude mcp add korean-law -- node ~/korean-law/mcp/build/server.js
 
 ### Codex
 
+> **Codex 플러그인으로 설치했다면 아래 1~3단계는 건너뛴다.** `codex plugin marketplace add airoasting/skills` 뒤 `codex plugin add korean-law@airoasting`을 입력하면 스킬과 MCP 서버가 함께 설치된다. 인증키는 환경변수로 받는다. `~/.zshrc` 맨 끝에 `export KOREAN_LAW_OC=인증키` 한 줄을 넣고 터미널과 Codex를 다시 켠다. 플러그인과 아래 수동 설치를 함께 하면 스킬이 두 번 잡히고 MCP 서버도 `korean-law`와 `korean_law` 두 벌이 된다. 하나만 고른다.
+
 **1. 스킬 받기**
 
 ```bash
